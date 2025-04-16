@@ -14,6 +14,39 @@ document.addEventListener("DOMContentLoaded", () => {
 
         nested: container.closest(".swiper") ? true : false,
       });
+
+      // Add mouse move handling for non-touch devices
+      if (window.matchMedia("(hover: hover) and (pointer: fine)").matches) {
+        let isMouseMoving = false;
+        let mouseMoveTimeout;
+        let lastMouseX = 0;
+
+        container.addEventListener("mousemove", (e) => {
+          if (!isMouseMoving) {
+            isMouseMoving = true;
+            lastMouseX = e.clientX;
+          }
+
+          clearTimeout(mouseMoveTimeout);
+          mouseMoveTimeout = setTimeout(() => {
+            isMouseMoving = false;
+          }, 100);
+
+          const rect = container.getBoundingClientRect();
+          const mouseX = e.clientX - rect.left;
+          const cardWidth = rect.width;
+          const slideCount = instance.slides.length;
+          const slideWidth = cardWidth / slideCount;
+
+          const currentSlide = Math.floor(mouseX / slideWidth);
+          if (
+            currentSlide !== instance.activeIndex &&
+            currentSlide < slideCount
+          ) {
+            instance.slideTo(currentSlide);
+          }
+        });
+      }
     }
     const likeBtn = card.querySelector(".product-card__like-btn");
     if (likeBtn) {
