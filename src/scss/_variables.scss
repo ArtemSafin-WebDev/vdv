@@ -1,0 +1,13 @@
+@use "media";
+
+:root {
+  --primary-color: #d81619;
+  --text-color: #202425;
+  --montserrat: "Montserrat", sans-serif;
+  --content-padding: 10rem;
+  --container-width: 172rem;
+
+  @include media.breakpoint(mobile) {
+    --content-padding: 1.5rem;
+  }
+}

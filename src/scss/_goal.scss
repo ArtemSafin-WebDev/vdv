@@ -1,0 +1,192 @@
+@use "media";
+@use "utils";
+
+.goal {
+  @include utils.blockWrapper;
+  margin-bottom: 10rem;
+  position: relative;
+  z-index: 1;
+  @include media.breakpoint(small-tablet) {
+    margin-bottom: 5.2rem;
+  }
+  @include media.breakpoint(mobile) {
+    margin-bottom: 3.4rem;
+  }
+}
+
+.goal__bg {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background-color: #eae4de;
+}
+.goal__bg-image {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.goal__content {
+  @include utils.blockContent;
+  padding: 6rem 0;
+  min-height: 57rem;
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  grid-gap: 3rem;
+  align-items: center;
+
+  @include media.breakpoint(small-tablet) {
+    min-height: auto;
+    padding-top: 6.5rem;
+    padding-bottom: 7.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 6rem;
+    align-items: stretch;
+  }
+  @include media.breakpoint(mobile) {
+    padding-bottom: 3.6rem;
+    padding-top: 3.6rem;
+    gap: 6rem;
+    min-height: 70.5rem;
+  }
+}
+
+.goal__text-content {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  grid-column: 1 / 6;
+
+  @include media.breakpoint(small-tablet) {
+    gap: 3.8rem;
+  }
+
+  @include media.breakpoint(mobile) {
+    gap: 2.3rem;
+    text-align: center;
+    align-items: center;
+  }
+}
+
+.goal__heading {
+  font-size: 3.8rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 110%;
+  text-transform: uppercase;
+
+  @include media.breakpoint(small-tablet) {
+    font-size: 2.6rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 110%;
+    text-transform: uppercase;
+  }
+
+  @include media.breakpoint(mobile) {
+    font-size: 1.8rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 110%;
+    text-transform: uppercase;
+  }
+}
+
+.goal__text {
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+  @include media.breakpoint(small-tablet) {
+    font-size: 1.8rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+    max-width: 40rem;
+  }
+
+  @include media.breakpoint(mobile) {
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+    max-width: none;
+  }
+}
+
+.goal__list {
+  grid-column: 9 / -1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  @include media.breakpoint(small-tablet) {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-gap: 2rem;
+  }
+
+  @include media.breakpoint(mobile) {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    grid-auto-rows: 1fr;
+    grid-gap: 1rem;
+    margin-top: auto;
+  }
+}
+
+.goal__card {
+  display: flex;
+  align-items: center;
+  gap: 3.1rem;
+  padding: 2.5rem 5.4rem;
+  border-radius: 1.2rem;
+  border: 1px solid white;
+  background: rgba(255, 255, 255, 0.7);
+  @include media.breakpoint(small-tablet) {
+    padding: 2rem 2.4rem;
+    border-radius: 1.2rem;
+    border: 1px solid white;
+    background: rgba(255, 255, 255, 0.7);
+    gap: 1.1rem;
+  }
+
+  @include media.breakpoint(mobile) {
+    gap: 1.6rem;
+    padding: 1.8rem 2.4rem;
+  }
+}
+
+.goal__card-icon {
+  width: 6rem;
+  height: 6rem;
+  object-fit: contain;
+  flex-shrink: 0;
+  @include media.breakpoint(small-tablet) {
+    width: 4rem;
+    height: 4rem;
+  }
+}
+
+.goal__card-title {
+  font-size: 2.2rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+  @include media.breakpoint(small-tablet) {
+    font-size: 1.8rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%;
+  }
+
+  @include media.breakpoint(mobile) {
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%;
+  }
+}

@@ -1,0 +1,98 @@
+@use "media";
+@use "utils";
+
+.customer-card {
+  @include utils.blockWrapper;
+  margin-bottom: 10rem;
+}
+
+.customer-card__content {
+  @include utils.blockContent;
+
+  color: white;
+  display: grid;
+  grid-gap: 3rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  position: relative;
+}
+
+.customer-card__content-bg {
+  background-color: var(--primary-color);
+  inset: 0;
+  z-index: -1;
+  border-radius: 1.2rem;
+  overflow: hidden;
+  position: absolute;
+  background-image: url("../images/customer-card/bg-desktop.svg");
+  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.customer-card__image-wrapper {
+  position: absolute;
+  grid-column: 1 / 2;
+  align-self: flex-end;
+  padding-left: 4.5rem;
+  padding-right: 2rem;
+}
+
+.customer-card__image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.customer-card__text-content {
+  grid-column: 2 / 3;
+  display: flex;
+  flex-direction: column;
+  padding: 6.6rem 0;
+  gap: 3rem;
+  padding-left: 6.7rem;
+  padding-right: 3rem;
+}
+
+.customer-card__heading {
+  font-size: 3.8rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 110%;
+  text-transform: uppercase;
+  text-wrap: balance;
+}
+
+.customer-card__text {
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+  max-width: 63rem;
+  p {
+    margin-bottom: 2rem;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.customer-card__link {
+  align-self: flex-start;
+  font-size: 1.4rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 90%;
+  text-transform: uppercase;
+  padding: 1.85rem 2.8rem;
+  text-align: center;
+  border-radius: 0.6rem;
+  border: 0.2rem solid white;
+  transition: color 0.2s, background-color 0.2s, border-color 0.2s;
+
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      color: var(--primary-color);
+      background-color: white;
+    }
+  }
+}
