@@ -1,0 +1,79 @@
+@use "media";
+@use "utils";
+
+.sales-catalog {
+  @include utils.blockWrapper;
+  padding-top: 3.6rem;
+  margin-bottom: 14rem;
+
+  @include media.breakpoint(tablet) {
+    padding-top: 2.8rem;
+    margin-bottom: 5rem;
+  }
+  @include media.breakpoint(mobile) {
+    padding-top: 1.8rem;
+    margin-bottom: 4rem;
+  }
+}
+
+.sales-catalog__content {
+  @include utils.blockContent;
+  display: flex;
+  flex-direction: column;
+}
+
+.sales-catalog__heading {
+  margin-top: 3.4rem;
+  margin-bottom: 6rem;
+  font-size: 4.6rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%;
+  text-transform: uppercase;
+
+  @include media.breakpoint(tablet) {
+    font-size: 3rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 90%;
+    text-transform: uppercase;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+
+  @include media.breakpoint(mobile) {
+    margin-top: 1.5rem;
+    margin-bottom: 1.8rem;
+    font-size: 2.2rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%;
+    text-transform: uppercase;
+  }
+}
+
+.sales-catalog__list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-gap: 3rem;
+  grid-row-gap: 6rem;
+  margin-bottom: 6.3rem;
+  @include media.breakpoint(tablet) {
+    grid-gap: 2rem;
+    grid-row-gap: 4rem;
+    margin-bottom: 4.3rem;
+  }
+  @include media.breakpoint(mobile) {
+    grid-template-columns: minmax(0, 1fr);
+    grid-gap: 3rem;
+    margin-bottom: 4rem;
+  }
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.sales-catalog__list-item {
+  display: flex;
+  flex-direction: column;
+}

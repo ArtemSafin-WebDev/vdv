@@ -4,12 +4,12 @@
             <ul class="breadcrumbs__list">
                 <li class="breadcrumbs__list-item">
                     <a href="#" class="breadcrumbs__link">
-                        Главная
+                        <span>Главная</span>
                     </a>
                 </li>
                 <li class="breadcrumbs__list-item">
                     <a href="#" class="breadcrumbs__link">
-                        Новости
+                        <span>Новости</span>
                     </a>
                 </li>
                 <li class="breadcrumbs__list-item">
@@ -22,7 +22,7 @@
         <div class="news-detail__row">
             <div class="news-detail__left-col">
                 <div class="news-detail__image-wrapper">
-                    <img src="/images/news-detail.jpg" alt="" class="news-detail__image">
+                    <img src="/images/news-detail.webp" alt="" class="news-detail__image">
                 </div>
                 <div class="news-detail__info">
                     <div class="news-detail__date">
@@ -40,10 +40,17 @@
                 </a>
             </div>
             <div class="news-detail__right-col">
-                <h1 class="news-detail__title">
-                    Галерея Моды ВДВ предлагает НОВУЮ КОЛЛЕКЦИЮ немецкого бренда MONARI!!!
+                <div class="news-detail__title-wrapper">
+                    <h1 class="news-detail__title">
+                        Галерея Моды ВДВ предлагает НОВУЮ КОЛЛЕКЦИЮ немецкого бренда MONARI!!!
 
-                </h1>
+                    </h1>
+                    <a href="#" class="news-detail__sharing-link">
+                        <svg width="14" height="14" aria-hidden="true">
+                            <use xlink:href="#sharing"></use>
+                        </svg>
+                    </a>
+                </div>
                 <div class="news-detail__text-content">
                     <p>
                         Брюки, футболки, джемперы, жакеты, весенние куртки в нежных кремово-коричневых оттенках
@@ -77,6 +84,9 @@
             <form action="/" method="POST" class="news-detail__form" data-need-validation="">
                 <div class="news-detail__form-input-wrapper">
                     <input type="email" class="news-detail__form-input" placeholder="Ваш e-mail" required="">
+                    <div class="news-detail__form-placeholder">
+                        Ваш e-mail
+                    </div>
                 </div>
                 <button type="submit" class="news-detail__form-button" type="submit">
                     Подписаться
