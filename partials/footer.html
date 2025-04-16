@@ -207,13 +207,14 @@
                             </a>
                         </li>
                     </ul>
-                    <form action="/" method="POST" class="page-footer__subscribe">
+                    <form action="/" method="POST" class="page-footer__subscribe" data-need-validation=""
+                        id="subscribe-error">
                         <h3 class="page-footer__subscribe-title">
                             Подписка на рассылку
                         </h3>
                         <div class="page-footer__subscribe-wrapper">
                             <input type="email" class="page-footer__subscribe-input" name="email"
-                                placeholder="Ваш e-mail" required="">
+                                placeholder="Ваш e-mail" required="" data-parsley-errors-container="#subscribe-error">
                             <button class="page-footer__subscribe-submit" type="submit">
                                 Подписаться
                             </button>

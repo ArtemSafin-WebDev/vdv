@@ -1,0 +1,89 @@
+@use "media";
+@use "utils";
+
+.gallery-card {
+  display: block;
+  border-radius: 1.2rem;
+  overflow: hidden;
+
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    width: 3.2rem;
+    height: 3.2rem;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url("/images/zoom.svg");
+    opacity: 0;
+    transition: opacity 0.2s;
+    z-index: 2;
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      &::before {
+        opacity: 1;
+      }
+      .gallery-card__image-wrapper {
+        &::before {
+          opacity: 1;
+        }
+        &::after {
+          transform: scaleY(1);
+        }
+      }
+    }
+  }
+}
+
+.gallery-card__image-wrapper {
+  position: relative;
+  aspect-ratio: 321 / 225;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(4, 4, 4, 0.6) 100%
+    );
+    z-index: 1;
+    transition: opacity 0.2s;
+    opacity: 0;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: var(--primary-color);
+    height: 0.5rem;
+    transform-origin: center bottom;
+    transform: scaleY(0);
+    transition: transform 0.2s;
+    z-index: 2;
+  }
+  @include media.breakpoint(tablet) {
+    aspect-ratio: 227 / 162;
+  }
+  @include media.breakpoint(mobile) {
+    border-radius: 135 / 97;
+  }
+}
+
+.gallery-card__image {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

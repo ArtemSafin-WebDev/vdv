@@ -1,0 +1,131 @@
+@use "media";
+@use "utils";
+
+.requisites {
+  @include utils.blockWrapper;
+  margin-bottom: 10rem;
+
+  @include media.breakpoint(tablet) {
+    margin-bottom: 5.3rem;
+  }
+
+  @include media.breakpoint(mobile) {
+    margin-bottom: 4rem;
+  }
+}
+
+.requisites__content {
+  @include utils.blockContent;
+  display: flex;
+  flex-direction: column;
+}
+
+.requisites__heading {
+  font-size: 3.8rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 90%;
+  text-transform: uppercase;
+  margin-bottom: 6rem;
+  @include media.breakpoint(tablet) {
+    font-size: 2.2rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 90%;
+    text-transform: uppercase;
+    margin-bottom: 3.4rem;
+  }
+
+  @include media.breakpoint(mobile) {
+    font-size: 1.8rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 110%;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 2.4rem;
+  }
+}
+
+.requisites__list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.requisites__card {
+  display: flex;
+  align-items: baseline;
+  width: 100%;
+  @include media.breakpoint(tablet) {
+    display: grid;
+    grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+    grid-gap: 2rem;
+  }
+
+  @include media.breakpoint(mobile) {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+
+.requisites__card-key {
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+  color: #6f7a87;
+  display: flex;
+  align-items: baseline;
+  width: max-content;
+  width: 58rem;
+
+  @include media.breakpoint(tablet) {
+    width: auto;
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+    margin-right: -1.9rem;
+  }
+
+  @include media.breakpoint(mobile) {
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+  }
+
+  &::after {
+    content: "";
+
+    border-bottom: 1px dashed #a9b0b9;
+    width: 1px;
+    flex-grow: 1;
+    margin-left: 0.4rem;
+    margin-right: 0.4rem;
+    @include media.breakpoint(mobile) {
+      display: none;
+    }
+  }
+}
+
+.requisites__card-value {
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+  @include media.breakpoint(tablet) {
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+  }
+  @include media.breakpoint(mobile) {
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+  }
+}

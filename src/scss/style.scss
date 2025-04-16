@@ -11,6 +11,8 @@
 @use "customer-card";
 @use "shop";
 @use "sales-card";
+@use "product-card";
+@use "gallery-card";
 @use "page-header";
 @use "collections";
 @use "not-found";
@@ -18,3 +20,6 @@
 @use "pagination";
 @use "news-detail";
 @use "sales-catalog";
+@use "about";
+@use "requisites";
+@use "products-slider";

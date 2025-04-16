@@ -1,0 +1,318 @@
+@use "media";
+@use "utils";
+
+.about {
+  @include utils.blockWrapper;
+  padding-top: 3.6rem;
+  margin-bottom: 10rem;
+
+  @include media.breakpoint(tablet) {
+    margin-bottom: 5.3rem;
+    padding-top: 2.8rem;
+  }
+
+  @include media.breakpoint(mobile) {
+    margin-bottom: 4rem;
+    padding-top: 1.8rem;
+  }
+}
+
+.about__content {
+  @include utils.blockContent;
+  display: flex;
+  flex-direction: column;
+}
+.about__heading {
+  font-size: 4.6rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%;
+  text-transform: uppercase;
+  margin-top: 3.4rem;
+  margin-bottom: 6rem;
+  @include media.breakpoint(tablet) {
+    font-size: 3rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 90%;
+    text-transform: uppercase;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+
+  @include media.breakpoint(mobile) {
+    text-align: center;
+    font-size: 2.2rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%;
+    margin-bottom: 1.82rem;
+    text-transform: uppercase;
+  }
+}
+
+.about__slider {
+  width: 100%;
+  .swiper {
+    width: 100%;
+    height: auto;
+  }
+
+  .swiper-slide {
+    height: auto !important;
+    box-sizing: border-box;
+    width: 25%;
+  }
+}
+
+.about__pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  max-width: 100%;
+  margin-top: 5rem;
+  @include media.breakpoint(tablet) {
+    margin-top: 3rem;
+  }
+  @include media.breakpoint(mobile) {
+    margin-top: 2rem;
+  }
+
+  .swiper-pagination-bullet.swiper-pagination-bullet.swiper-pagination-bullet {
+    margin: 0;
+    width: 10rem;
+    height: 0.3rem;
+    background-color: rgba(#a9b0b9, 0.4);
+    border-radius: 0;
+    opacity: 1;
+    margin: 0;
+    transition: background-color 0.2s;
+
+    &.swiper-pagination-bullet-active {
+      background-color: #a9b0b9;
+      cursor: default;
+    }
+
+    @media (hover: hover) and (pointer: fine) {
+      &:not(.swiper-pagination-bullet-active):hover {
+        background-color: var(--primary-color);
+      }
+    }
+  }
+}
+
+.about__row {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  grid-gap: 3rem;
+  margin-top: 9.4rem;
+  @include media.breakpoint(tablet) {
+    display: flex;
+    flex-direction: column;
+    gap: 1.8rem;
+    margin-top: 5rem;
+  }
+
+  @include media.breakpoint(mobile) {
+    margin-top: 3.2rem;
+    gap: 2rem;
+  }
+}
+
+.about__video-wrapper {
+  grid-column: 1 / 6;
+  position: relative;
+  overflow: hidden;
+  border-radius: 1.2rem;
+  aspect-ratio: 699 / 387;
+  @include media.breakpoint(tablet) {
+    aspect-ratio: 721 / 399;
+  }
+  @include media.breakpoint(mobile) {
+    aspect-ratio: 290 / 160;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(#202425, 0.3);
+  }
+
+  svg {
+    position: absolute;
+    margin: auto;
+    inset: 0;
+    width: 7rem;
+    height: 7rem;
+    z-index: 5;
+    @include media.breakpoint(mobile) {
+      width: 2.8rem;
+      height: 2.8rem;
+    }
+  }
+}
+.about__video-image {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about__visit {
+  grid-column: 6 / -1;
+  padding: 7rem 0;
+  padding-left: 14.4rem;
+  padding-right: 14rem;
+  border-radius: 1.2rem;
+  background: #f2f4f6;
+  color: var(--text-color);
+  gap: 2rem;
+  background-image: url("/images/about-visit-decor.svg");
+  background-size: 10.6rem auto;
+  background-repeat: no-repeat;
+  background-position: left center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  @include media.breakpoint(tablet) {
+    padding: 4.3rem;
+    padding-left: 12rem;
+    padding-right: 5rem;
+    gap: 1.6rem;
+    background-size: 7.7rem auto;
+  }
+
+  @include media.breakpoint(mobile) {
+    padding-left: 6.2rem;
+    padding-top: 2.6rem;
+    padding-right: 2.6rem;
+    padding-bottom: 2.6rem;
+    background-size: 4.9rem auto;
+    background-position: left -1rem top 2.8rem;
+    justify-content: flex-start;
+    gap: 0.8rem;
+  }
+}
+
+.about__visit-heading {
+  font-size: 3.8rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%;
+  text-transform: uppercase;
+  max-width: 56rem;
+
+  @include media.breakpoint(tablet) {
+    font-size: 2.2rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%;
+    text-transform: uppercase;
+    max-width: none;
+  }
+
+  @include media.breakpoint(mobile) {
+    font-size: 1.8rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%;
+    text-transform: uppercase;
+  }
+}
+
+.about__visit-text {
+  font-size: 2.4rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+  @include media.breakpoint(tablet) {
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+  }
+  @include media.breakpoint(mobile) {
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+  }
+}
+
+.about__location {
+  margin-top: 5rem;
+  display: flex;
+  align-items: center;
+  gap: 2.9rem;
+  padding: 3.9rem 8.2rem;
+  padding-right: 14rem;
+  border-radius: 1.2rem;
+  background: #f2f4f6;
+  color: var(--text-color);
+  position: relative;
+  overflow: hidden;
+
+  @include media.breakpoint(tablet) {
+    padding: 4rem;
+    margin-top: 2.4rem;
+    align-items: flex-start;
+  }
+
+  @include media.breakpoint(mobile) {
+    padding: 2.2rem;
+    margin-top: 2rem;
+    padding-left: 1.7rem;
+    padding-right: 1.3rem;
+    padding-bottom: 3rem;
+    gap: 1.2rem;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    bottom: 0;
+    height: 0.5rem;
+    background-color: var(--primary-color);
+  }
+}
+
+.about__location-icon {
+  flex-shrink: 0;
+  width: 3.8rem;
+  height: 4.8rem;
+  object-fit: contain;
+  @include media.breakpoint(mobile) {
+    width: 3.3rem;
+    height: 4.2rem;
+  }
+}
+
+.about__location-text {
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+  @include media.breakpoint(tablet) {
+    font-size: 1.8rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+  }
+
+  @include media.breakpoint(mobile) {
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+  }
+
+  b {
+    font-weight: 700;
+    color: var(--primary-color);
+  }
+}

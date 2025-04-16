@@ -147,6 +147,16 @@
     opacity: 1;
     margin: 0;
     transition: background-color 0.2s;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      top: -0.5rem;
+      bottom: -0.5rem;
+      left: 0;
+      right: 0;
+      pointer-events: all;
+    }
 
     &.swiper-pagination-bullet-active {
       background-color: #a9b0b9;
