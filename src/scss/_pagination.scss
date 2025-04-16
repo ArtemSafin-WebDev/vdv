@@ -1,0 +1,62 @@
+@use "media";
+@use "utils";
+
+.pagination__list {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  @include media.breakpoint(tablet) {
+    justify-content: center;
+  }
+}
+
+.pagination__list-item {
+  flex-shrink: 0;
+}
+
+.pagination__link {
+  display: block;
+  height: 4rem;
+  min-width: 4rem;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+  padding: 0 0.4rem;
+  border-radius: 0.4rem;
+  border: 1px solid #f2f4f6;
+  transition: color 0.2s, background-color 0.2s, border-color 0.2s;
+  color: var(--text-color);
+
+  &:link,
+  &:visited {
+    color: var(--text-color);
+  }
+
+  &.disabled,
+  &.current {
+    cursor: default;
+    pointer-events: none;
+    color: #a9b0b9;
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      border-color: var(--primary-color);
+    }
+  }
+
+  @include media.breakpoint(mobile) {
+    height: 3rem;
+    min-width: 3rem;
+    border-radius: 0.4rem;
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%;
+    padding: 0.2rem;
+  }
+}

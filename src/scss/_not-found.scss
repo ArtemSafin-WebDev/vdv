@@ -1,0 +1,90 @@
+@use "media";
+@use "utils";
+
+.not-found {
+  @include utils.blockWrapper;
+}
+
+.not-found__content {
+  @include utils.blockContent;
+  flex-direction: column;
+  display: flex;
+  text-align: center;
+  gap: 3rem;
+  align-items: center;
+  padding-top: 12.2rem;
+  padding-bottom: 20rem;
+
+  @include media.breakpoint(tablet) {
+    padding-top: 2.2rem;
+    padding-bottom: 7.3rem;
+  }
+  @include media.breakpoint(mobile) {
+    padding-top: 3.2rem;
+    padding-bottom: 8.2rem;
+  }
+}
+
+.not-found__code {
+  font-size: 28rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 90%;
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--primary-color);
+
+  @include media.breakpoint(tablet) {
+    font-size: 22rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 90%;
+    text-transform: uppercase;
+  }
+
+  @include media.breakpoint(mobile) {
+    font-size: 14rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 90%;
+    text-transform: uppercase;
+  }
+}
+
+.not-found__text {
+  font-size: 1.4rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+  @include media.breakpoint(tablet) {
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+  }
+}
+
+.not-found__home {
+  font-size: 1.4rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 90%;
+  text-transform: uppercase;
+  padding: 2rem 2.25rem;
+  text-align: center;
+  transition: background-color 0.4s, color 0.4s;
+  border-radius: 0.6rem;
+  border: 2px solid var(--primary-color);
+  color: var(--text-color);
+  &:link,
+  &:visited {
+    color: var(--text-color);
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      background-color: var(--primary-color);
+      color: white;
+    }
+  }
+}

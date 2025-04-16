@@ -5,6 +5,14 @@
   @include utils.blockWrapper;
   margin-bottom: 10rem;
   padding-top: 5rem;
+  @include media.breakpoint(tablet) {
+    padding-top: 3rem;
+    margin-bottom: 4.5rem;
+  }
+  @include media.breakpoint(mobile) {
+    padding-top: 3rem;
+    margin-bottom: 4.2rem;
+  }
 }
 
 .collections__content {
@@ -17,6 +25,13 @@
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   grid-gap: 3rem;
+  @include media.breakpoint(tablet) {
+    grid-gap: 2rem;
+  }
+  @include media.breakpoint(mobile) {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    grid-gap: 2rem;
+  }
 }
 
 .collections__list-item {
@@ -44,6 +59,12 @@
     display: block;
     grid-area: stack;
     padding-bottom: 77%;
+    @include media.breakpoint(tablet) {
+      padding-bottom: 114%;
+    }
+    @include media.breakpoint(mobile) {
+      padding-bottom: 90%;
+    }
   }
 
   @media (hover: hover) and (pointer: fine) {
@@ -85,6 +106,9 @@
     background: #a9b0b9;
     height: 1rem;
     position: absolute;
+    @include media.breakpoint(tablet) {
+      display: none;
+    }
   }
 }
 
@@ -98,6 +122,16 @@
   flex-direction: column;
   align-items: center;
   gap: 2.5rem;
+
+  @include media.breakpoint(tablet) {
+    gap: 3rem;
+    padding: 5.5rem 2rem;
+  }
+
+  @include media.breakpoint(mobile) {
+    padding: 3.5rem;
+    gap: 2rem;
+  }
 }
 
 .collections__card-title {
@@ -112,6 +146,22 @@
   text-decoration-skip-ink: none;
   text-underline-offset: 0.6rem;
   text-decoration-thickness: 0.3rem;
+  @include media.breakpoint(tablet) {
+    font-size: 3.6rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 90%;
+    text-transform: uppercase;
+    text-underline: none;
+  }
+
+  @include media.breakpoint(mobile) {
+    font-size: 2.2rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 90%;
+    text-transform: uppercase;
+  }
 }
 
 .collections__card-btn {
@@ -119,10 +169,27 @@
   font-size: 1.4rem;
   font-style: normal;
   font-weight: 400;
-  line-height: 90%; /* 1.26rem */
+  line-height: 90%;
   text-transform: uppercase;
   padding: 1.85rem 2.8rem;
   border-radius: 0.6rem;
   border: 0.2rem solid white;
   transition: border-color 0.4s, background-color 0.4s, color 0.4s;
+  @include media.breakpoint(tablet) {
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 90%;
+    text-transform: uppercase;
+    padding: 1.85rem 2.8rem;
+  }
+
+  @include media.breakpoint(mobile) {
+    font-size: 1.2rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 90%;
+    text-transform: uppercase;
+    padding: 1.45rem 2.8rem;
+  }
 }

@@ -1,0 +1,259 @@
+<div class="modal js-modal" id="signin-modal">
+    <div class="modal__inner">
+        <button class="modal__close js-close-modal">
+            <svg width="23" height="23" viewBox="0 0 23 23">
+                <use xlink:href="#modal-close"></use>
+            </svg>
+        </button>
+        <h3 class="modal__heading">
+            Авторизация
+        </h3>
+        <form class="modal__form" action="/" method="POST" data-need-validation="">
+            <div class="modal__fields">
+                <div class="modal__field">
+                    <div class="modal__input-wrapper">
+                        <div class="text-input-wrapper">
+                            <input type="text" class="text-input" name="login" placeholder="Логин" required="">
+                            <span class="text-input-placeholder">Логин</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal__field">
+                    <div class="modal__input-wrapper">
+                        <div class="text-input-wrapper">
+                            <input type="password" class="text-input" name="password" placeholder="Пароль" required="">
+                            <span class="text-input-placeholder">Пароль</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="modal__form-bottom-row">
+                <button class="modal__submit" type="submit">
+                    Войти
+                </button>
+                <div class="modal__links">
+                    <a href="#" class="modal__link">
+                        Регистрация
+                    </a>
+                    <a href="#" class="modal__link">
+                        Восстановить пароль
+                    </a>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<div class="modal js-modal" id="signup-modal">
+    <div class="modal__inner">
+        <button class="modal__close js-close-modal">
+            <svg width="23" height="23" viewBox="0 0 23 23">
+                <use xlink:href="#modal-close"></use>
+            </svg>
+        </button>
+        <h3 class="modal__heading">
+            Регистрация
+        </h3>
+        <form class="modal__form" action="/" method="POST" data-need-validation="">
+            <div class="modal__fields">
+                <div class="modal__field">
+                    <div class="modal__input-wrapper">
+                        <div class="text-input-wrapper">
+                            <input type="text" class="text-input" name="first-name" placeholder="Ваше имя" required="">
+                            <span class="text-input-placeholder">Ваше имя</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal__field">
+                    <div class="modal__input-wrapper">
+                        <div class="text-input-wrapper">
+                            <input type="text" class="text-input" name="last-name" placeholder="Фамилия" required="">
+                            <span class="text-input-placeholder">Фамилия</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal__field">
+                    <div class="modal__input-wrapper">
+                        <div class="text-input-wrapper">
+                            <input type="email" class="text-input" name="email" placeholder="E-mail" required="">
+                            <span class="text-input-placeholder">E-mail</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal__field">
+                    <div class="modal__input-wrapper">
+                        <div class="text-input-wrapper">
+                            <input type="password" class="text-input" name="password" placeholder="Пароль" required=""
+                                id="signup-password">
+                            <span class="text-input-placeholder">Пароль</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal__field">
+                    <div class="modal__input-wrapper">
+                        <div class="text-input-wrapper">
+                            <input type="password" class="text-input" name="confirm-password"
+                                placeholder="Подтвердите пароль" required="" data-parsley-equalto="#signup-password">
+                            <span class="text-input-placeholder">Подтвердите пароль</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal__form-bottom-row">
+                <button class="modal__submit modal__submit--center-on-mobile" type="submit">
+                    Зарегистрироваться
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+<div class="modal js-modal" id="restore-password-modal">
+    <div class="modal__inner">
+        <button class="modal__close js-close-modal">
+            <svg width="23" height="23" viewBox="0 0 23 23">
+                <use xlink:href="#modal-close"></use>
+            </svg>
+        </button>
+        <h3 class="modal__heading">
+            Восстановление пароля
+        </h3>
+        <form class="modal__form" action="/" method="POST" data-need-validation="">
+            <div class="modal__fields">
+                <div class="modal__field">
+                    <div class="modal__input-wrapper">
+                        <div class="text-input-wrapper">
+                            <input type="email" class="text-input" name="email" placeholder="E-mail" required="">
+                            <span class="text-input-placeholder">E-mail</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal__form-bottom-row">
+                <button class="modal__submit modal__submit--center-on-mobile" type="submit">
+                    Отправить
+                </button>
+
+            </div>
+        </form>
+    </div>
+</div>
+<div class="modal js-modal" id="order-call-modal">
+    <div class="modal__inner">
+        <button class="modal__close js-close-modal">
+            <svg width="23" height="23" viewBox="0 0 23 23">
+                <use xlink:href="#modal-close"></use>
+            </svg>
+        </button>
+        <h3 class="modal__heading">
+            Заказать звонок
+        </h3>
+        <form class="modal__form" action="/" method="POST" data-need-validation="">
+            <div class="modal__fields">
+                <div class="modal__field">
+                    <div class="modal__input-wrapper">
+                        <div class="text-input-wrapper">
+                            <input type="text" class="text-input" name="name" placeholder="Ваше имя" required="">
+                            <span class="text-input-placeholder">Ваше имя<sup>*</sup></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal__field">
+                    <div class="modal__input-wrapper">
+                        <div class="text-input-wrapper">
+                            <input type="tel" class="text-input js-phone-input" name="phone" placeholder="Телефон"
+                                required="" data-parsley-phone="">
+                            <span class="text-input-placeholder">Телефон<sup>*</sup></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal__field">
+                    <div class="modal__input-wrapper">
+                        <div class="text-input-wrapper">
+                            <textarea name="comment" class="text-input" placeholder="Сообщение"></textarea>
+                            <span class="text-input-placeholder">Сообщение</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal__form-bottom-row modal__form-bottom-row--with-policy">
+                <button class="modal__submit" type="submit">
+                    Отправить
+                </button>
+                <div class="modal__policy">
+                    Нажимая на кнопку «Отправить», вы даете согласие с  <a href="#">политикой
+                        конфиденциальности</a>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<div class="modal js-modal" id="get-card-modal">
+    <div class="modal__inner modal__inner--get-card">
+        <button class="modal__close js-close-modal">
+            <svg width="23" height="23" viewBox="0 0 23 23">
+                <use xlink:href="#modal-close"></use>
+            </svg>
+        </button>
+        <h3 class="modal__heading">
+            Получить карту
+        </h3>
+        <form class="modal__form" action="/" method="POST" data-need-validation="">
+            <div class="modal__fields">
+                <div class="modal__field">
+                    <div class="modal__input-wrapper">
+                        <div class="text-input-wrapper">
+                            <input type="text" class="text-input" name="first-name" placeholder="Ваше имя" required="">
+                            <span class="text-input-placeholder">Ваше имя<sup>*</sup></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal__field">
+                    <div class="modal__input-wrapper">
+                        <div class="text-input-wrapper">
+                            <input type="text" class="text-input" name="last-name" placeholder="Фамилия" required="">
+                            <span class="text-input-placeholder">Фамилия<sup>*</sup></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal__field">
+                    <div class="modal__input-wrapper">
+                        <div class="text-input-wrapper">
+                            <input type="text" class="text-input" name="surname" placeholder="Отчество">
+                            <span class="text-input-placeholder">Отчество</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal__field">
+                    <div class="modal__input-wrapper">
+                        <div class="text-input-wrapper">
+                            <input type="tel" class="text-input js-phone-input" name="phone" placeholder="Телефон"
+                                required="" data-parsley-phone="">
+                            <span class="text-input-placeholder">Телефон<sup>*</sup></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal__field">
+                    <div class="modal__input-wrapper">
+                        <div class="text-input-wrapper">
+                            <input type="email" class="text-input" name="email" placeholder="E-mail" required="">
+                            <span class="text-input-placeholder">E-mail<sup>*</sup></span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="modal__form-bottom-row modal__form-bottom-row--with-policy">
+                <button class="modal__submit" type="submit">
+                    Отправить
+                </button>
+                <div class="modal__policy">
+                    Нажимая на кнопку «Отправить», вы даете согласие с  <a href="#">политикой
+                        конфиденциальности</a>
+                </div>
+            </div>
+            <div class="modal__form-remark">
+                Поля, обязательные для заполнения *
+            </div>
+        </form>
+    </div>
+</div>

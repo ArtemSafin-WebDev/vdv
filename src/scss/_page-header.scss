@@ -2,10 +2,12 @@
 @use "utils";
 
 .page-header {
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 100;
+  position: relative;
+  z-index: 50;
+
+  @include media.breakpoint(tablet) {
+    display: none;
+  }
 }
 .page-header__top {
   @include utils.blockWrapper;
@@ -148,6 +150,7 @@
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.2s, visibility 0s linear 0.2s;
+  z-index: 30;
 }
 
 .page-header__location-schedule-dropdown-inner {

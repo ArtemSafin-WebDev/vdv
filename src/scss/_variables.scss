@@ -7,6 +7,9 @@
   --content-padding: 10rem;
   --container-width: 172rem;
 
+  @include media.breakpoint(tablet) {
+    --content-padding: 2.4rem;
+  }
   @include media.breakpoint(mobile) {
     --content-padding: 1.5rem;
   }

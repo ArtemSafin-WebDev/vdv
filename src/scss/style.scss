@@ -1,6 +1,7 @@
 @use "variables";
 @use "reset";
 @use "breadcrumbs";
+@use "text-input";
 @use "page-footer";
 @use "home-news";
 @use "goal";
@@ -11,3 +12,6 @@
 @use "shop";
 @use "page-header";
 @use "collections";
+@use "not-found";
+@use "modal";
+@use "pagination";

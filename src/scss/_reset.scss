@@ -28,7 +28,7 @@ html {
   scrollbar-gutter: stable;
   scroll-behavior: smooth;
   scroll-padding-top: 10rem;
-  @include media.breakpoint(small-tablet) {
+  @include media.breakpoint(tablet) {
     font-size: 10px;
   }
   @include media.breakpoint(mobile) {

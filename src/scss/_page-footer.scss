@@ -14,7 +14,7 @@
   padding-top: 8.4rem;
   padding-bottom: 8rem;
 
-  @include media.breakpoint(small-tablet) {
+  @include media.breakpoint(tablet) {
     padding-top: 5.4rem;
     padding-bottom: 3rem;
   }
@@ -30,7 +30,7 @@
   grid-template-columns: repeat(4, minmax(0, 1fr));
   grid-gap: 3rem;
 
-  @include media.breakpoint(small-tablet) {
+  @include media.breakpoint(tablet) {
     grid-gap: 2rem;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     grid-row-gap: 6.4rem;
@@ -54,7 +54,7 @@
   grid-column: span 1;
   display: flex;
   flex-direction: column;
-  @include media.breakpoint(small-tablet) {
+  @include media.breakpoint(tablet) {
     grid-column: 1 / -1;
     grid-gap: 2rem;
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -70,7 +70,7 @@
 
 .page-footer__phones-wrapper {
   display: contents;
-  @include media.breakpoint(small-tablet) {
+  @include media.breakpoint(tablet) {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -88,7 +88,13 @@
   font-weight: 500;
   line-height: 90%;
   text-transform: uppercase;
-  @include media.breakpoint(small-tablet) {
+
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      color: var(--primary-color);
+    }
+  }
+  @include media.breakpoint(tablet) {
     font-size: 1.8rem;
     font-style: normal;
     font-weight: 500;
@@ -104,7 +110,12 @@
   line-height: 90%;
   text-transform: uppercase;
   margin-top: 0.8rem;
-  @include media.breakpoint(small-tablet) {
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      color: var(--primary-color);
+    }
+  }
+  @include media.breakpoint(tablet) {
     font-size: 1.6rem;
     font-style: normal;
     font-weight: 500;
@@ -120,7 +131,7 @@
   font-weight: 400;
   line-height: 90%;
   text-decoration: underline;
-  text-decoration-thickness: 1px;
+  text-decoration-thickness: 0.5px;
   color: var(--primary-color);
   transition: color 0.2s, text-decoration-color 0.2s;
   align-self: flex-start;
@@ -131,7 +142,13 @@
     color: var(--primary-color);
   }
 
-  @include media.breakpoint(small-tablet) {
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      text-decoration-color: transparent;
+    }
+  }
+
+  @include media.breakpoint(tablet) {
     margin-top: 2rem;
     font-size: 1.2rem;
     font-style: normal;
@@ -145,7 +162,7 @@
 
 .page-footer__address-wrapper {
   display: contents;
-  @include media.breakpoint(small-tablet) {
+  @include media.breakpoint(tablet) {
     display: block;
   }
   @include media.breakpoint(mobile) {
@@ -159,7 +176,7 @@
   font-weight: 400;
   line-height: 90%;
   margin-top: 2rem;
-  @include media.breakpoint(small-tablet) {
+  @include media.breakpoint(tablet) {
     font-size: 1.2rem;
     font-style: normal;
     font-weight: 400;
@@ -175,7 +192,7 @@
   line-height: 140%;
   margin-top: 1.4rem;
 
-  @include media.breakpoint(small-tablet) {
+  @include media.breakpoint(tablet) {
     margin-top: 1.6rem;
     font-size: 1.2rem;
     font-style: normal;
@@ -186,7 +203,7 @@
 
 .page-footer__social-wrapper {
   display: contents;
-  @include media.breakpoint(small-tablet) {
+  @include media.breakpoint(tablet) {
     display: block;
   }
 }
@@ -196,7 +213,7 @@
   flex-wrap: wrap;
   gap: 0.6rem;
   margin-top: 2.6rem;
-  @include media.breakpoint(small-tablet) {
+  @include media.breakpoint(tablet) {
     margin: 0;
     gap: 0.6rem;
   }
@@ -231,7 +248,7 @@
   margin-top: 7.2rem;
   display: flex;
   flex-direction: column;
-  @include media.breakpoint(small-tablet) {
+  @include media.breakpoint(tablet) {
     margin-top: 3rem;
   }
 }
@@ -253,7 +270,7 @@
   padding: 0.8rem;
   padding-right: 1.35rem;
   padding-left: 0;
-  @include media.breakpoint(small-tablet) {
+  @include media.breakpoint(tablet) {
     border-radius: 0.6rem;
     padding-right: 1.1rem;
   }
@@ -273,7 +290,7 @@
   padding: 0 1.8rem;
   height: 2rem;
   color: var(--text-color);
-  @include media.breakpoint(small-tablet) {
+  @include media.breakpoint(tablet) {
     height: 1.7rem;
     font-size: 1.2rem;
     font-style: normal;
@@ -294,7 +311,7 @@
   text-transform: uppercase;
   color: var(--primary-color);
   text-align: center;
-  @include media.breakpoint(small-tablet) {
+  @include media.breakpoint(tablet) {
     font-size: 1rem;
     font-style: normal;
     font-weight: 400;
@@ -307,7 +324,7 @@
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   grid-gap: 3rem;
-  @include media.breakpoint(small-tablet) {
+  @include media.breakpoint(tablet) {
     grid-gap: 2rem;
   }
 }
@@ -331,7 +348,7 @@
       color: var(--primary-color);
     }
   }
-  @include media.breakpoint(small-tablet) {
+  @include media.breakpoint(tablet) {
     font-size: 1.6rem;
     font-style: normal;
     font-weight: 500;
@@ -358,7 +375,7 @@
     }
   }
 
-  @include media.breakpoint(small-tablet) {
+  @include media.breakpoint(tablet) {
     font-size: 1.4rem;
     font-style: normal;
     font-weight: 300;
@@ -378,7 +395,7 @@
   grid-template-columns: repeat(12, minmax(0, 1fr));
   grid-gap: 3rem;
 
-  @include media.breakpoint(small-tablet) {
+  @include media.breakpoint(tablet) {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     grid-gap: 2rem;
@@ -400,7 +417,7 @@
   display: flex;
   align-items: center;
   gap: 2.4rem;
-  @include media.breakpoint(small-tablet) {
+  @include media.breakpoint(tablet) {
     grid-column: 1 / 2;
     flex-direction: column;
     align-items: flex-start;
@@ -426,7 +443,7 @@
   font-style: normal;
   font-weight: 300;
   line-height: 140%;
-  @include media.breakpoint(small-tablet) {
+  @include media.breakpoint(tablet) {
     font-size: 1.2rem;
     font-style: normal;
     font-weight: 300;
@@ -445,7 +462,7 @@
   align-items: center;
   flex-wrap: wrap;
   gap: 1.2rem;
-  @include media.breakpoint(small-tablet) {
+  @include media.breakpoint(tablet) {
     grid-column: 2 / 3;
     gap: 1rem;
   }
@@ -471,7 +488,7 @@
   display: flex;
   align-items: center;
   gap: 1.7rem;
-  @include media.breakpoint(small-tablet) {
+  @include media.breakpoint(tablet) {
     grid-column: 3 / 4;
     flex-direction: column;
     align-items: flex-end;
@@ -502,7 +519,7 @@
   br {
     display: none;
   }
-  @include media.breakpoint(small-tablet) {
+  @include media.breakpoint(tablet) {
     font-size: 1.2rem;
     font-style: normal;
     font-weight: 300;
