@@ -428,7 +428,7 @@
   text-decoration: underline;
   text-decoration-style: dotted;
   text-decoration-skip-ink: none;
-  // text-decoration-thickness: 1px;
+
   text-underline-offset: 0.2rem;
   transition: color 0.2s, text-decoration-color 0.2s;
   color: var(--primary-color);
@@ -436,6 +436,12 @@
   &:link,
   &:visited {
     color: var(--primary-color);
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      text-decoration-color: transparent;
+    }
   }
 }
 

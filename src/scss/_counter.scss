@@ -1,0 +1,47 @@
+.counter {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: 0.6rem;
+  border: 1px solid #a9b0b9;
+  width: 10rem;
+  gap: 1rem;
+  padding: 1.9rem 1.3rem;
+}
+
+.counter__btn {
+  flex-shrink: 0;
+  width: 1.4rem;
+  height: 1.4rem;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  color: var(--primary-color);
+
+  svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+    fill: var(--primary-color);
+    transition: fill 0.2s;
+  }
+
+  &:not([disabled]):hover {
+    svg {
+      fill: var(--primary-color-hover);
+    }
+  }
+}
+
+.counter__amount {
+  width: 2%;
+  flex-grow: 1;
+}
+
+.counter__amount-input {
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  text-align: center;
+}

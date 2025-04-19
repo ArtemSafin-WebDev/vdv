@@ -1,6 +1,7 @@
 @use "variables";
 @use "reset";
 @use "breadcrumbs";
+@use "counter";
 @use "text-input";
 @use "page-footer";
 @use "home-news";
@@ -23,3 +24,5 @@
 @use "about";
 @use "requisites";
 @use "products-slider";
+@use "contacts";
+@use "product";

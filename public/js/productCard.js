@@ -11,8 +11,10 @@ document.addEventListener("DOMContentLoaded", () => {
           clickable: true,
         },
         effect: "fade",
-
         nested: container.closest(".swiper") ? true : false,
+        allowTouchMove:
+          !window.matchMedia("(hover: hover) and (pointer: fine)").matches &&
+          !window.matchMedia("(max-width: 1024px)").matches,
       });
 
       // Add mouse move handling for non-touch devices

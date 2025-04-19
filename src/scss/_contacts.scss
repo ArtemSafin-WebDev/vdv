@@ -1,0 +1,157 @@
+@use "media";
+@use "utils";
+
+.contacts {
+  @include utils.blockWrapper;
+  margin-bottom: 8.3rem;
+  padding-top: 3.6rem;
+  @include media.breakpoint(tablet) {
+    padding-top: 2.8rem;
+    margin-bottom: 4rem;
+  }
+}
+
+.contacts__content {
+  @include utils.blockContent;
+}
+
+.contacts__heading {
+  font-size: 4.6rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%;
+  text-transform: uppercase;
+  margin-top: 3.4rem;
+  @include media.breakpoint(tablet) {
+    font-size: 3rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 90%;
+    text-transform: uppercase;
+    margin-top: 3rem;
+  }
+}
+
+.contacts__list {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-gap: 3rem;
+  margin-top: 6rem;
+  @include media.breakpoint(tablet) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-gap: 2rem;
+    margin-top: 3rem;
+  }
+}
+
+.contacts__list-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.contacts__card {
+  padding: 3rem;
+  padding-top: 2.6rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  border-radius: 1.2rem;
+  border: 1px solid #f2f4f6;
+  @include media.breakpoint(tablet) {
+    padding: 2rem 3rem;
+  }
+}
+
+.contacts__card-title {
+  font-size: 2.8rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  @include media.breakpoint(tablet) {
+    font-size: 2.2rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+}
+
+.contacts__card-text {
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+  margin-top: 2rem;
+  @include media.breakpoint(tablet) {
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+  }
+}
+
+.contacts__card-links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.contacts__card-phone {
+  font-size: 2.2rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 90%;
+  text-transform: uppercase;
+  @include media.breakpoint(tablet) {
+    font-size: 1.8rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 90%;
+    text-transform: uppercase;
+  }
+}
+
+.contacts__card-email {
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+  color: var(--primary-color);
+  @include media.breakpoint(tablet) {
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+  }
+
+  &:link,
+  &:visited {
+    color: var(--primary-color);
+  }
+}
+
+.contacts__card-social-list {
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.contacts__card-social-list-item {
+  flex-shrink: 0;
+}
+
+.contacts__card-social-link {
+  display: block;
+  width: 3.6rem;
+  height: 3.6rem;
+}
+
+.contacts__card-social-link-icon {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}

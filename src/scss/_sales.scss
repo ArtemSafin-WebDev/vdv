@@ -107,20 +107,7 @@
     flex-direction: column;
     height: auto;
     box-sizing: border-box;
-    width: calc(33.33% - 3rem * 2 / 3);
-    margin-right: 3rem;
-    @include media.breakpoint(tablet) {
-      margin-right: 2rem;
-      width: calc(50% - 2rem * 1 / 2);
-    }
-
-    @include media.breakpoint(mobile) {
-      width: 100%;
-      margin-right: 2rem;
-    }
-    &:last-child {
-      margin-right: 0;
-    }
+    width: 33%;
   }
 }
 
