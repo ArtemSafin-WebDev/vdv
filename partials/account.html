@@ -1,0 +1,141 @@
+<section class="account">
+    <div class="account__content">
+        <div class="breadcrumbs">
+            <ul class="breadcrumbs__list">
+                <li class="breadcrumbs__list-item">
+                    <a href="#" class="breadcrumbs__link">
+                        <span>Главная</span>
+                    </a>
+                </li>
+                <li class="breadcrumbs__list-item">
+                    <a href="#" class="breadcrumbs__link active">
+                        Личный кабинет
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <h1 class="account__heading">
+            Личный кабинет
+        </h1>
+        <div class="account__nav">
+            <ul class="account__nav-list">
+                <li class="account__nav-list-item">
+                    <a href="#" class="account__nav-link">
+                        Мои заказы
+                    </a>
+                </li>
+                <li class="account__nav-list-item">
+                    <a href="#" class="account__nav-link active">
+                        Мои данные
+                    </a>
+                </li>
+                <li class="account__nav-list-item">
+                    <a href="#" class="account__nav-link">
+                        Рассылки
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="account__user-data">
+            <form action="/" method="POST" class="account__user-data-form" data-need-validation="">
+                <div class="account__user-data-form-wrapper">
+                    <div class="account__user-data-form-fields">
+                        <div class="account__user-data-form-field">
+                            <h3 class="account__user-data-form-field-label">
+                                Имя
+                            </h3>
+                            <div class="account__user-data-form-field-wrapper">
+                                <div class="text-input-wrapper">
+                                    <input type="text" class="text-input" name="first-name" placeholder="Ваше имя"
+                                        required="" value="Константин">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="account__user-data-form-field">
+                            <h3 class="account__user-data-form-field-label">
+                                Фамилия
+                            </h3>
+                            <div class="account__user-data-form-field-wrapper">
+                                <div class="text-input-wrapper">
+                                    <input type="text" class="text-input" name="last-name" placeholder="Ваша фамилия"
+                                        required="" value="Константинопольский">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="account__user-data-form-field">
+                            <h3 class="account__user-data-form-field-label">
+                                Пол
+                            </h3>
+                            <div class="account__user-data-form-field-wrapper">
+                                <div class="text-input-wrapper">
+                                    <input type="text" class="text-input" name="gender" placeholder="Пол" required=""
+                                        value="Муж">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="account__user-data-form-field">
+                            <h3 class="account__user-data-form-field-label">
+                                Телефон
+                            </h3>
+                            <div class="account__user-data-form-field-wrapper">
+                                <div class="text-input-wrapper">
+                                    <input type="tel" class="text-input js-phone-input" name="phone"
+                                        placeholder="Телефон" required="" data-parsley-phone=""
+                                        value="+7 (904) 666-70-00">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="account__user-data-form-field">
+                            <h3 class="account__user-data-form-field-label">
+                                Логин
+                            </h3>
+                            <div class="account__user-data-form-field-wrapper">
+                                <div class="text-input-wrapper">
+                                    <input type="text" class="text-input" name="login" placeholder="Логин" required=""
+                                        value="Konstanteen">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="account__user-data-form-field">
+                            <h3 class="account__user-data-form-field-label">
+                                E-mail
+                            </h3>
+                            <div class="account__user-data-form-field-wrapper">
+                                <div class="text-input-wrapper">
+                                    <input type="email" class="text-input" name="login" placeholder="Логин" required=""
+                                        value="mail@mail.ru">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="account__user-data-form-field">
+                            <h3 class="account__user-data-form-field-label">
+                                День рождения
+                            </h3>
+                            <div class="account__user-data-form-field-wrapper">
+                                <div class="text-input-wrapper">
+                                    <input type="text" class="text-input js-date-input" name="login" placeholder="Логин"
+                                        required="" value="20.02.2002" inputmode="numeric" data-parsley-date="">
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="account__user-data-form-controls">
+                        <div class="account__user-data-form-controls-inner">
+
+
+                            <a href="#restore-password-modal"
+                                class="account__user-data-form-change-password js-open-modal">
+                                Изменить пароль
+                            </a>
+                            <button class="account__user-data-form-save" type="submit">
+                                Сохранить
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</section>

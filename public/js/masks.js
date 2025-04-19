@@ -7,6 +7,9 @@ document.addEventListener("DOMContentLoaded", () => {
       instance.mask(input);
     });
 
+    const dateInputs = context.querySelectorAll(".js-date-input");
+    Inputmask("99.99.9999").mask(dateInputs);
+
     const onlyNumericInputsNoFormatting = Array.from(
       context.querySelectorAll(".js-numeric-input")
     );

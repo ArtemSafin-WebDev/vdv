@@ -54,6 +54,7 @@ textarea.text-input {
   padding-top: 1.7rem;
   padding-bottom: 1.7rem;
   resize: none;
+  flex-grow: 1;
 
   & ~ .parsley-errors-list {
     transform: none;
@@ -70,6 +71,9 @@ textarea.text-input {
 
 .text-input-wrapper {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
 
   .parsley-errors-list {
     position: absolute;

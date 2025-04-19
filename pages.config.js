@@ -7,6 +7,7 @@ import salesCatalog from "./pages-data/sales";
 import about from "./pages-data/about";
 import contacts from "./pages-data/contacts";
 import product from "./pages-data/product";
+import account from "./pages-data/account";
 const pagesConfig = {
   ...home,
   ...news,
@@ -17,6 +18,7 @@ const pagesConfig = {
   ...about,
   ...contacts,
   ...product,
+  ...account,
 };
 
 export default pagesConfig;

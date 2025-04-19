@@ -1,3 +1,6 @@
+@use "media";
+@use "utils";
+
 .counter {
   display: flex;
   align-items: center;
@@ -7,6 +10,10 @@
   width: 10rem;
   gap: 1rem;
   padding: 1.9rem 1.3rem;
+
+  @include media.breakpoint(tablet) {
+    padding: 1.4rem 1.3rem;
+  }
 }
 
 .counter__btn {

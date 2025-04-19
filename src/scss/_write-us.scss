@@ -1,0 +1,120 @@
+@use "media";
+@use "utils";
+
+.write-us {
+  @include utils.blockWrapper;
+  margin-bottom: 8rem;
+}
+
+.write-us__content {
+  @include utils.blockContent;
+
+  padding: 6rem 0;
+  border-radius: 1.2rem;
+  background: #f2f4f6;
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  grid-gap: 3rem;
+}
+
+.write-us__text-content {
+  grid-column: 1 / 5;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  padding-left: 6rem;
+  padding-right: 6rem;
+}
+
+.write-us__heading {
+  font-size: 3.8rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 90%;
+  text-transform: uppercase;
+}
+
+.write-us__text {
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+}
+
+.write-us__form {
+  grid-column: 5 / -1;
+  padding-right: 5rem;
+}
+
+.write-us__fields {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-gap: 3rem;
+  grid-row-gap: 1rem;
+}
+
+.write-us__field {
+  grid-column: 1 / 2;
+  display: flex;
+  flex-direction: column;
+}
+
+.write-us__field--high {
+  grid-row: 1 / 4;
+  grid-column: 2 / 3;
+}
+
+.write-us__controls {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.write-us__submit {
+  text-align: center;
+  font-size: 1.4rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 90%;
+  text-transform: uppercase;
+  padding: 2.35rem 2rem;
+  transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+  border-radius: 0.6rem;
+  border: 0.2rem solid var(--primary-color);
+  flex-shrink: 0;
+
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      background-color: var(--primary-color);
+      color: white;
+    }
+  }
+}
+
+.write-us__policy {
+  font-size: 1.4rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 140%;
+  max-width: 40rem;
+
+  a {
+    color: var(--primary-color);
+    text-decoration: underline;
+    text-underline-offset: 1px;
+    text-decoration-skip-ink: none;
+    text-decoration-thickness: 1px;
+    transition: color 0.2s, text-decoration-color 0.2s;
+    &:link,
+    &:visited {
+      color: var(--primary-color);
+    }
+
+    @media (hover: hover) and (pointer: fine) {
+      &:hover {
+        text-decoration-color: transparent;
+      }
+    }
+  }
+}

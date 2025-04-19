@@ -10,23 +10,66 @@ document.addEventListener("DOMContentLoaded", () => {
       const mainContainer = slider.querySelector(
         ".product__gallery-main .swiper"
       );
+      const thumbsWrapper = slider.querySelector(
+        ".product__gallery-thumbs-wrapper"
+      );
+
+      const checkScrollable = (thumbsSwiper) => {
+        console.log("Is beginning", thumbsSwiper.isBeginning);
+        console.log("Is end", thumbsSwiper.isEnd);
+        console.log("Progress", thumbsSwiper.progress);
+        if (!thumbsSwiper.isBeginning) {
+          thumbsWrapper.classList.add("scrollable-top");
+        } else {
+          thumbsWrapper.classList.remove("scrollable-top");
+        }
+
+        if (!thumbsSwiper.isEnd) {
+          thumbsWrapper.classList.add("scrollable-bottom");
+        } else {
+          thumbsWrapper.classList.remove("scrollable-bottom");
+        }
+      };
 
       const thumbsSwiper = new Swiper(thumbsContainer, {
         direction: "vertical",
         slidesPerView: "auto",
         spaceBetween: 10,
-        watchSlidesProgress: true,
+        watchSlidesProgress: false,
         navigation: {
           nextEl: slider.querySelector(".product__gallery-arrow--down"),
           prevEl: slider.querySelector(".product__gallery-arrow--up"),
         },
+        init: false,
+        on: {
+          init: (swiper) => {
+            checkScrollable(swiper);
+          },
+          slideChange: (swiper) => {
+            checkScrollable(swiper);
+          },
+          slideChangeTransitionEnd: (swiper) => {
+            checkScrollable(swiper);
+          },
+          reachEnd: (swiper) => {
+            checkScrollable(swiper);
+            console.log("Reached end");
+          },
+          reachBeginning: (swiper) => {
+            checkScrollable(swiper);
+            console.log("Reached end");
+          },
+        },
       });
+
+      thumbsSwiper.init();
 
       new Swiper(mainContainer, {
         slidesPerView: 1,
-        spaceBetween: 10,
+        spaceBetween: 0,
         thumbs: {
           swiper: thumbsSwiper,
+          autoScrollOffset: 1,
         },
       });
     });
