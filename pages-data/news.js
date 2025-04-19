@@ -1,6 +1,7 @@
 const news = {
   "/news.html": {
     title: "Новости",
+    isNewsPage: true,
   },
 };
 

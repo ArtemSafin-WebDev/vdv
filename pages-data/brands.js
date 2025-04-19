@@ -1,6 +1,7 @@
 const brands = {
   "/brands.html": {
     title: "Бренды",
+    isBrandsPage: true,
   },
 };
 
