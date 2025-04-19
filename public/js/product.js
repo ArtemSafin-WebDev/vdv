@@ -10,6 +10,25 @@ document.addEventListener("DOMContentLoaded", () => {
       const mainContainer = slider.querySelector(
         ".product__gallery-main .swiper"
       );
+
+      const thumbsSwiper = new Swiper(thumbsContainer, {
+        direction: "vertical",
+        slidesPerView: "auto",
+        spaceBetween: 10,
+        watchSlidesProgress: true,
+        navigation: {
+          nextEl: slider.querySelector(".product__gallery-arrow--down"),
+          prevEl: slider.querySelector(".product__gallery-arrow--up"),
+        },
+      });
+
+      new Swiper(mainContainer, {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        thumbs: {
+          swiper: thumbsSwiper,
+        },
+      });
     });
     const likeBtn = product.querySelector(".product__like-btn");
 
