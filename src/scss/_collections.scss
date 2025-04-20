@@ -5,13 +5,31 @@
   @include utils.blockWrapper;
   margin-bottom: 10rem;
   padding-top: 5rem;
+  position: relative;
+  z-index: 1;
+  &::before {
+    content: "";
+    height: 36.6rem;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: -1;
+    background-color: #f2f4f6;
+  }
   @include media.breakpoint(tablet) {
     padding-top: 3rem;
     margin-bottom: 4.5rem;
+    &::before {
+      height: 28rem;
+    }
   }
   @include media.breakpoint(mobile) {
     padding-top: 3rem;
     margin-bottom: 4.2rem;
+    &::before {
+      height: 16rem;
+    }
   }
 }
 

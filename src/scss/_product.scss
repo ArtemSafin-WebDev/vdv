@@ -190,7 +190,7 @@
   border-radius: 1.2rem;
   cursor: pointer;
   transition: opacity 0.2s;
-
+  width: 100%;
   .swiper-slide-thumb-active & {
     opacity: 0.5;
     cursor: default;
@@ -270,6 +270,7 @@
 .product__gallery-main-card {
   aspect-ratio: 553 / 827;
   position: relative;
+  width: 100%;
 }
 
 .product__gallery-main-card-image {

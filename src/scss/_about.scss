@@ -126,6 +126,7 @@
   overflow: hidden;
   border-radius: 1.2rem;
   aspect-ratio: 699 / 387;
+  width: 100%;
   @include media.breakpoint(tablet) {
     aspect-ratio: 721 / 399;
   }

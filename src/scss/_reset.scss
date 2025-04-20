@@ -19,15 +19,44 @@
 
 html {
   box-sizing: border-box;
-  font-size: 62.5%;
+  // font-size: 62.5%;
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: transparent;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-size: clamp(2px, 0.52vw, 125px);
+  font-size: 10px;
+
   scrollbar-gutter: stable;
   scroll-behavior: smooth;
   scroll-padding-top: 10rem;
+
+  @media only screen and (max-width: 1915px) {
+    font-size: 9.5px;
+  }
+  @media only screen and (max-width: 1820px) {
+    font-size: 9px;
+  }
+  @media only screen and (max-width: 1720px) {
+    font-size: 8.5px;
+  }
+  @media only screen and (max-width: 1630px) {
+    font-size: 8px;
+  }
+  @media only screen and (max-width: 1530px) {
+    font-size: 7.5px;
+  }
+  @media only screen and (max-width: 1430px) {
+    font-size: 7px;
+  }
+  @media only screen and (max-width: 1330px) {
+    font-size: 6.5px;
+  }
+  @media only screen and (max-width: 1240px) {
+    font-size: 6px;
+  }
+  @media only screen and (max-width: 1150px) {
+    font-size: 5.5px;
+  }
   @include media.breakpoint(tablet) {
     font-size: 10px;
   }

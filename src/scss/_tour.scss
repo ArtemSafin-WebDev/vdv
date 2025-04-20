@@ -1,0 +1,71 @@
+@use "media";
+@use "utils";
+.tour {
+  @include utils.blockWrapper;
+  margin-bottom: 8rem;
+
+  @include media.breakpoint(tablet) {
+    margin-bottom: 4rem;
+  }
+}
+
+.tour__content {
+  @include utils.blockContent;
+  display: flex;
+  flex-direction: column;
+}
+
+.tour__heading {
+  font-size: 3.8rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 90%;
+  text-transform: uppercase;
+  margin-bottom: 7rem;
+  @include media.breakpoint(tablet) {
+    font-size: 2.2rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 90%;
+    text-transform: uppercase;
+    margin-bottom: 2.8rem;
+  }
+
+  @include media.breakpoint(mobile) {
+    font-size: 2.2rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 110%;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+}
+
+.tour__wrapper {
+  border-radius: 1.2rem;
+  overflow: hidden;
+  aspect-ratio: 1718 / 501;
+  position: relative;
+  width: 100%;
+  @include media.breakpoint(tablet) {
+    aspect-ratio: 720 / 410;
+  }
+
+  @include media.breakpoint(mobile) {
+    aspect-ratio: 1 / 1;
+  }
+
+  & > * {
+    transform: scale(1.02);
+  }
+  & > *,
+  iframe {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover;
+  }
+}

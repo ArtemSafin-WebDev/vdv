@@ -1,0 +1,49 @@
+@use "media";
+@use "utils";
+
+.map {
+  @include utils.blockWrapper;
+  margin-bottom: 8rem;
+  @include media.breakpoint(tablet) {
+    margin-bottom: 4rem;
+  }
+}
+
+.map__content {
+  @include utils.blockContent;
+}
+
+.map__wrapper {
+  width: 100%;
+  aspect-ratio: 1720 / 550;
+  overflow: hidden;
+  border-radius: 1.2rem;
+  position: relative;
+  @include media.breakpoint(tablet) {
+    aspect-ratio: 720 / 410;
+  }
+  @include media.breakpoint(mobile) {
+    aspect-ratio: 290 / 165;
+  }
+}
+
+.map__element {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.map__marker {
+  width: 7.5rem;
+  height: 5.5rem;
+  transform: translateX(-50%) translateY(-100%);
+}
+
+.map__marker-pin {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}

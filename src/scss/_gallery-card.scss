@@ -44,7 +44,7 @@
 .gallery-card__image-wrapper {
   position: relative;
   aspect-ratio: 321 / 225;
-
+  width: 100%;
   &::before {
     content: "";
     position: absolute;

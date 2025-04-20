@@ -4,6 +4,13 @@
 .write-us {
   @include utils.blockWrapper;
   margin-bottom: 8rem;
+  @include media.breakpoint(tablet) {
+    margin-bottom: 4rem;
+  }
+  @include media.breakpoint(mobile) {
+    margin-bottom: 4rem;
+    background: #f2f4f6;
+  }
 }
 
 .write-us__content {
@@ -11,10 +18,26 @@
 
   padding: 6rem 0;
   border-radius: 1.2rem;
-  background: #f2f4f6;
+  background-color: #f2f4f6;
   display: grid;
   grid-template-columns: repeat(12, minmax(0, 1fr));
   grid-gap: 3rem;
+  @include media.breakpoint(tablet) {
+    padding: 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3.2rem;
+  }
+  @include media.breakpoint(mobile) {
+    background-color: transparent;
+    padding: 0;
+    padding-top: 3.2rem;
+    padding-bottom: 3.2rem;
+    border-radius: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
 }
 
 .write-us__text-content {
@@ -24,6 +47,17 @@
   gap: 3rem;
   padding-left: 6rem;
   padding-right: 6rem;
+
+  @include media.breakpoint(tablet) {
+    padding: 0;
+    gap: 2.4rem;
+  }
+
+  @include media.breakpoint(mobile) {
+    padding: 0;
+    text-align: center;
+    gap: 1.8rem;
+  }
 }
 
 .write-us__heading {
@@ -32,6 +66,21 @@
   font-weight: 500;
   line-height: 90%;
   text-transform: uppercase;
+  @include media.breakpoint(tablet) {
+    font-size: 2.2rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 90%;
+    text-transform: uppercase;
+  }
+
+  @include media.breakpoint(mobile) {
+    font-size: 1.8rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 90%;
+    text-transform: uppercase;
+  }
 }
 
 .write-us__text {
@@ -39,11 +88,27 @@
   font-style: normal;
   font-weight: 400;
   line-height: 140%;
+  @include media.breakpoint(tablet) {
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+  }
+
+  @include media.breakpoint(mobile) {
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+  }
 }
 
 .write-us__form {
   grid-column: 5 / -1;
   padding-right: 5rem;
+  @include media.breakpoint(tablet) {
+    padding: 0;
+  }
 }
 
 .write-us__fields {
@@ -51,6 +116,17 @@
   grid-template-columns: repeat(2, minmax(0, 1fr));
   grid-gap: 3rem;
   grid-row-gap: 1rem;
+
+  @include media.breakpoint(tablet) {
+    grid-gap: 2rem;
+    grid-row-gap: 1rem;
+  }
+
+  @include media.breakpoint(mobile) {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
 }
 
 .write-us__field {
@@ -69,6 +145,10 @@
   align-items: center;
   gap: 2rem;
   margin-top: 3rem;
+
+  @include media.breakpoint(mobile) {
+    margin-top: 2rem;
+  }
 }
 
 .write-us__submit {
@@ -90,6 +170,15 @@
       color: white;
     }
   }
+
+  @include media.breakpoint(tablet) {
+    font-size: 1.2rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 90%; /* 1.08rem */
+    text-transform: uppercase;
+    padding: 1.95rem 2rem;
+  }
 }
 
 .write-us__policy {
@@ -98,6 +187,19 @@
   font-weight: 300;
   line-height: 140%;
   max-width: 40rem;
+  @include media.breakpoint(tablet) {
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 140%;
+  }
+
+  @include media.breakpoint(mobile) {
+    font-size: 1.2rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 140%;
+  }
 
   a {
     color: var(--primary-color);

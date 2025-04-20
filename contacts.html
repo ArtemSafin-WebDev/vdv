@@ -9,10 +9,82 @@
     {{> header }}
     <main class="page-main">
       {{> contacts }}
+      {{> map }}
+      {{> tour }}
       {{> write-us }}
     </main>
     {{> footer }}
     {{> modals }}
+
+    <script src="https://api-maps.yandex.ru/v3/?apikey=f02ed68d-66b3-4bd2-b8eb-c88edc899a8f&lang=ru_RU"></script>
+
+    <script>
+      initMap();
+
+      async function initMap() {
+        await ymaps3.ready;
+        const {
+          YMap,
+          YMapDefaultSchemeLayer,
+          YMapControls,
+          YMapMarker,
+          YMapDefaultFeaturesLayer
+        } = ymaps3;
+
+        const { YMapZoomControl } = await ymaps3.import('@yandex/ymaps3-controls@0.0.1');
+
+        const mapElement = document.querySelector('#contacts-map');
+        if (!mapElement) return;
+        const lat = Number(mapElement.parentElement.getAttribute('data-lat'));
+        const lng = Number(mapElement.parentElement.getAttribute('data-lng'));
+        const pinUrl = mapElement.parentElement.getAttribute('data-pin')
+        const zoom = mapElement.parentElement.hasAttribute('data-zoom') ? Number(mapElement.parentElement.getAttribute('data-zoom')) : 14
+
+        const markerElement = document.createElement('div');
+        markerElement.className = 'map__marker';
+        const pin = document.createElement('img')
+        pin.className = 'map__marker-pin';
+        pin.src = pinUrl;
+
+        markerElement.appendChild(pin)
+
+        const marker = new YMapMarker(
+          {
+
+            coordinates: [lng, lat],
+            draggable: false,
+            mapFollowsOnDrag: false
+          },
+          markerElement
+        );
+
+        const map = new YMap(
+          mapElement,
+          {
+            location: {
+              center: [lng, lat],
+              zoom: 14
+            },
+            behaviors: ['drag', 'pinchZoom']
+          }
+        );
+
+        map.addChild(new YMapDefaultSchemeLayer())
+          .addChild(new YMapDefaultFeaturesLayer({ zIndex: 1800 }))
+          .addChild(marker)
+
+        const controls = new YMapControls({
+          position: 'top right', orientation: 'vertical'
+        });
+        controls.addChild(
+          new YMapZoomControl({
+            easing: 'linear',
+
+          })
+        );
+        map.addChild(controls);
+      }
+    </script>
     <script type="module" src="/src/js/main.ts"></script>
   </body>
 
