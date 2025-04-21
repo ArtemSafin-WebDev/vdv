@@ -61,6 +61,10 @@ html {
     font-size: 10px;
   }
   @include media.breakpoint(mobile) {
+    font-size: 11px;
+  }
+
+  @media only screen and (max-width: 320px) {
     font-size: 10px;
   }
 }

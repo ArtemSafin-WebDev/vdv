@@ -8,6 +8,8 @@ import about from "./pages-data/about";
 import contacts from "./pages-data/contacts";
 import product from "./pages-data/product";
 import account from "./pages-data/account";
+import mailing from "./pages-data/mailing";
+import catalog from "./pages-data/catalog";
 const pagesConfig = {
   ...home,
   ...news,
@@ -19,6 +21,8 @@ const pagesConfig = {
   ...contacts,
   ...product,
   ...account,
+  ...mailing,
+  ...catalog,
 };
 
 export default pagesConfig;

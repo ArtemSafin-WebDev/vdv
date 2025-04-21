@@ -1,0 +1,94 @@
+<section class="account">
+    <div class="account__content">
+        <div class="breadcrumbs">
+            <ul class="breadcrumbs__list">
+                <li class="breadcrumbs__list-item">
+                    <a href="#" class="breadcrumbs__link">
+                        <span>Главная</span>
+                    </a>
+                </li>
+                <li class="breadcrumbs__list-item">
+                    <a href="#" class="breadcrumbs__link active">
+                        Личный кабинет
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <h1 class="account__heading">
+            Личный кабинет
+        </h1>
+        <div class="account__nav">
+            <ul class="account__nav-list">
+                <li class="account__nav-list-item">
+                    <a href="#" class="account__nav-link">
+                        Мои заказы
+                    </a>
+                </li>
+                <li class="account__nav-list-item">
+                    <a href="#" class="account__nav-link">
+                        Мои данные
+                    </a>
+                </li>
+                <li class="account__nav-list-item">
+                    <a href="#" class="account__nav-link active">
+                        Рассылки
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="account__mailing">
+            <div class="account__mailing-wrapper">
+
+
+                <h1 class="account__mailing-heading">
+                    E-mail рассылки
+                </h1>
+                <form action="/" method="POST" class="account__mailing-form" data-need-validation="">
+                    <div class="account__mailing-fields">
+                        <div class="account__mailing-field">
+                            <label class="account__mailing-checkbox">
+                                <input type="checkbox" class="account__mailing-checkbox-input" value="sales" checked="">
+                                <span class="account__mailing-checkbox-mark">
+                                    <svg width="14" height="14" aria-hidden="true">
+                                        <use xlink:href="#checkmark"></use>
+                                    </svg>
+                                </span>
+                                <span class="account__mailing-checkbox-content">
+                                    <div class="account__mailing-checkbox-title">
+                                        Акции и распродажи
+                                    </div>
+                                    <span class="account__mailing-checkbox-text">
+                                        Получайте письма с самыми свежими предложениями, скидками и новинками на сайте
+                                    </span>
+                                </span>
+                            </label>
+                        </div>
+                        <div class="account__mailing-field">
+                            <label class="account__mailing-checkbox">
+                                <input type="checkbox" class="account__mailing-checkbox-input" value="personal">
+                                <span class="account__mailing-checkbox-mark">
+                                    <svg width="14" height="14" aria-hidden="true">
+                                        <use xlink:href="#checkmark"></use>
+                                    </svg>
+                                </span>
+                                <span class="account__mailing-checkbox-content">
+                                    <div class="account__mailing-checkbox-title">
+                                        Персональные предложения и уведомления
+                                    </div>
+                                    <span class="account__mailing-checkbox-text">
+                                        Получайте доступ к закрытым распродажам, персональным подборкам, а также
+                                        индивидуальным промокодам.
+                                    </span>
+                                </span>
+                            </label>
+                        </div>
+
+                    </div>
+                    <button class="account__mailing-submit" type="submit">
+                        Сохранить
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>

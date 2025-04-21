@@ -8,6 +8,9 @@
 .page-header__top {
   @include utils.blockWrapper;
   background-color: #fff;
+  @include media.breakpoint(mobile) {
+    border-bottom: 1px solid #f2f4f6;
+  }
 }
 
 .page-header__top-content {
