@@ -29,6 +29,11 @@
   grid-template-columns: repeat(12, minmax(0, 1fr));
   grid-gap: 3rem;
 
+  .modal & {
+    margin-top: 0;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  }
+
   @include media.breakpoint(tablet) {
     display: contents;
   }
@@ -38,6 +43,10 @@
   grid-column: 1 / 6;
   display: flex;
   flex-direction: column;
+
+  .modal & {
+    grid-column: 1 / 2;
+  }
   @include media.breakpoint(tablet) {
     display: contents;
   }
@@ -47,6 +56,9 @@
   grid-column: 6 / -1;
   display: flex;
   flex-direction: column;
+  .modal & {
+    grid-column: 2 / 3;
+  }
   @include media.breakpoint(tablet) {
     display: contents;
   }
@@ -56,6 +68,10 @@
   display: grid;
   grid-template-columns: repeat(5, minmax(0, 1fr));
   grid-gap: 3rem;
+
+  .modal & {
+    grid-gap: 1.6rem;
+  }
 
   @include media.breakpoint(tablet) {
     display: grid;
@@ -191,6 +207,10 @@
   cursor: pointer;
   transition: opacity 0.2s;
   width: 100%;
+
+  .modal & {
+    border-radius: 0.8rem;
+  }
   .swiper-slide-thumb-active & {
     opacity: 0.5;
     cursor: default;
@@ -336,6 +356,14 @@
   font-weight: 500;
   line-height: 120%;
   text-transform: uppercase;
+
+  .modal & {
+    font-size: 3.8rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%;
+    text-transform: uppercase;
+  }
   @include media.breakpoint(tablet) {
     font-size: 3rem;
     font-style: normal;
@@ -361,6 +389,10 @@
   line-height: 140%;
   color: #6f7a87;
   margin-top: 3rem;
+
+  .modal & {
+    margin-top: 1.9rem;
+  }
   @include media.breakpoint(tablet) {
     font-size: 1.8rem;
     font-style: normal;
@@ -382,6 +414,9 @@
   margin-top: 2rem;
   display: flex;
   flex-direction: column;
+  .modal & {
+    margin-top: 1.3rem;
+  }
   @include media.breakpoint(tablet) {
     margin-top: 2.4rem;
   }
@@ -606,6 +641,11 @@
   display: flex;
   flex-direction: column;
   gap: 0.3rem;
+
+  .modal & {
+    margin-top: 2rem;
+    gap: 0;
+  }
   @include media.breakpoint(mobile) {
     margin-top: 2.6rem;
   }
@@ -668,6 +708,10 @@
   display: flex;
   align-items: center;
   gap: 1rem;
+
+  .modal & {
+    margin-top: 2rem;
+  }
   @include media.breakpoint(mobile) {
     margin-top: 2.2rem;
   }
@@ -957,6 +1001,10 @@
   color: #6f7a87;
   width: 35rem;
 
+  .modal & {
+    width: 45%;
+  }
+
   @include media.breakpoint(mobile) {
     font-size: 1.4rem;
     font-style: normal;
@@ -971,9 +1019,9 @@
     flex-grow: 1;
     border-bottom: 1px dashed #a9b0b9;
     flex-shrink: 0;
-    align-self: flex-end;
+    align-self: flex-start;
     margin: 0 0.4rem;
-    margin-bottom: 0.5rem;
+    margin-top: 1.8rem;
     @include media.breakpoint(mobile) {
       align-self: flex-start;
       margin-top: 1.5rem;
@@ -1057,4 +1105,8 @@
       }
     }
   }
+}
+
+.product__modal-specs {
+  margin-top: 2rem;
 }
