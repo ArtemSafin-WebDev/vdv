@@ -133,3 +133,34 @@ textarea.text-input {
     grid-row: 1 / 2;
   }
 }
+
+.text-input-label {
+  display: block;
+  margin-bottom: 1.2rem;
+  font-size: 1.2rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 140%;
+  margin-bottom: 1.2rem;
+  sup {
+    color: var(--primary-color);
+  }
+}
+
+.text-input-label {
+  font-size: 1.2rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 140%;
+  display: block;
+  margin-bottom: 1.2rem;
+  sup,
+  span {
+    font-size: 1.2rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 140%;
+    // font-weight: 300;
+    color: var(--primary-color);
+  }
+}

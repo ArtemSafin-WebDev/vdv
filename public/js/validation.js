@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     messages: {
       en: "This value should be a mobile number",
-      ru: "Введите правильный номер мобильного телефона",
+      ru: "Неправильный номер",
     },
   });
 

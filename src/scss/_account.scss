@@ -871,6 +871,9 @@
   grid-template-columns: 3fr 1fr 1fr 2fr;
   grid-gap: 3rem;
   margin-bottom: 2rem;
+  &--with-discount {
+    grid-template-columns: 4fr 1fr 1fr 1fr 1fr;
+  }
   @include media.breakpoint(tablet) {
     grid-gap: 2rem;
   }
@@ -911,6 +914,11 @@
   grid-gap: 3rem;
   grid-template-areas: "leftwrapper price quantity total";
   align-items: center;
+
+  &--with-discount {
+    grid-template-columns: 4fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: "leftwrapper discount price quantity total";
+  }
   @include media.breakpoint(tablet) {
     grid-gap: 2rem;
   }
@@ -1166,15 +1174,21 @@
 
 .account__orders-card-product-price-discount {
   display: none;
-  font-size: 1.4rem;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 140%;
-  padding: 0.4rem 1.6rem;
-  color: #6f7a87;
-  border-radius: 3rem;
-  background: #dfffce;
-  text-align: center;
+
+  .account__orders-card-product--with-discount & {
+    display: block;
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+    color: #6f7a87;
+    padding: 0.4rem 1.6rem;
+    border-radius: 3rem;
+    background: #dfffce;
+    text-align: center;
+    align-self: center;
+    justify-self: flex-start;
+  }
 
   @include media.breakpoint(mobile) {
     justify-self: stretch;
@@ -1182,6 +1196,15 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+    padding: 0.4rem 1.6rem;
+    color: #6f7a87;
+    border-radius: 3rem;
+    background: #dfffce;
+    text-align: center;
   }
 }
 

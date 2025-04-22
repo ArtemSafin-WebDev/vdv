@@ -1,0 +1,425 @@
+<section class="checkout">
+    <div class="checkout__content">
+        <div class="breadcrumbs">
+            <ul class="breadcrumbs__list">
+                <li class="breadcrumbs__list-item">
+                    <a href="#" class="breadcrumbs__link">
+                        <span>Главная</span>
+                    </a>
+                </li>
+                <li class="breadcrumbs__list-item">
+                    <a href="#" class="breadcrumbs__link">
+                        <span>Корзина</span>
+                    </a>
+                </li>
+                <li class="breadcrumbs__list-item">
+                    <a href="#" class="breadcrumbs__link active">
+                        Оформление заказа
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+        <h1 class="checkout__heading">
+            Оформление заказа
+        </h1>
+        <div class="checkout__row">
+            <div class="checkout__main">
+                <form action="/" method="POST" class="checkout__form" data-need-validation="" id="checkout-form">
+                    <div class="checkout__region" id="checkout-region">
+                        <h3 class="checkout__region-heading">
+                            Регион доставки
+                        </h3>
+                        <div class="checkout__region-wrapper">
+                            <input class="checkout__region-input" type="text" placeholder="Введите город"
+                                value="Москва, Россия" required="" data-parsley-errors-container="#checkout-region">
+                            <button class="checkout__region-button" type="button">
+                                <svg width="14" height="14" aria-hidden="true">
+                                    <use xlink:href="#cross"></use>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="checkout__delivery">
+                        <h3 class="checkout__delivery-heading">
+                            Способ доставки
+                        </h3>
+                        <ul class="checkout__delivery-list">
+                            <li class="checkout__delivery-list-item">
+                                <label class="checkout__delivery-card">
+                                    <input class="checkout__delivery-card-input" type="radio" name="delivery" value="1"
+                                        checked="">
+                                    <span class="checkout__delivery-card-mark">
+                                        <span class="checkout__delivery-card-mark-icon"></span>
+                                    </span>
+                                    <span class="checkout__delivery-card-content">
+                                        <span class="checkout__delivery-card-title">
+                                            СДЭК (Самовывоз из ПВЗ) — 0 ₽
+                                        </span>
+                                        <span class="checkout__delivery-card-text">
+                                            от 2х дней (зависит от региона доставки)
+                                        </span>
+                                        <a href="#" class="checkout__delivery-card-link">
+                                            <svg width="14" height="14" aria-hidden="true">
+                                                <use xlink:href="#location"></use>
+                                            </svg>
+                                            Выбрать пункт самовывоза
+                                        </a>
+                                        <div class="checkout__delivery-card-address">
+                                            Малый Левшинский пер. 5
+                                        </div>
+                                        <div class="checkout__delivery-card-remark">
+                                            Доставка заказа в один из пунктов самовывоза компании СДЭК
+                                        </div>
+                                    </span>
+                                </label>
+                            </li>
+                            <li class="checkout__delivery-list-item">
+                                <label class="checkout__delivery-card">
+                                    <input class="checkout__delivery-card-input" type="radio" name="delivery" value="2">
+                                    <span class="checkout__delivery-card-mark">
+                                        <span class="checkout__delivery-card-mark-icon"></span>
+                                    </span>
+                                    <span class="checkout__delivery-card-content">
+                                        <span class="checkout__delivery-card-title">
+                                            СДЭК (Доставка курьером) — 0 ₽
+                                        </span>
+                                        <span class="checkout__delivery-card-text">
+                                            от 2х дней (зависит от региона доставки)
+                                        </span>
+                                    </span>
+                                </label>
+                            </li>
+                            <li class="checkout__delivery-list-item">
+                                <label class="checkout__delivery-card">
+                                    <input class="checkout__delivery-card-input" type="radio" name="delivery" value="3">
+                                    <span class="checkout__delivery-card-mark">
+                                        <span class="checkout__delivery-card-mark-icon"></span>
+                                    </span>
+                                    <span class="checkout__delivery-card-content">
+                                        <span class="checkout__delivery-card-title">
+                                            Самовывоз из магазина — бесплатно
+                                        </span>
+
+                                    </span>
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="checkout__payment">
+                        <h3 class="checkout__payment-heading">
+                            Способ оплаты
+                        </h3>
+                        <ul class="checkout__payment-list">
+                            <li class="checkout__payment-list-item">
+                                <label class="checkout__payment-card">
+                                    <input class="checkout__payment-card-input" type="radio" name="payment" value="1"
+                                        checked="">
+                                    <span class="checkout__payment-card-mark">
+
+                                    </span>
+                                    <span class="checkout__payment-card-title">
+                                        Оплата на сайте — скидка 10%
+                                    </span>
+                                </label>
+                            </li>
+                            <li class="checkout__payment-list-item">
+                                <label class="checkout__payment-card">
+                                    <input class="checkout__payment-card-input" type="radio" name="payment" value="2" />
+                                    <span class="checkout__payment-card-mark">
+
+                                    </span>
+                                    <span class="checkout__payment-card-title">
+                                        Оплата наличными или картой при получении
+                                    </span>
+                                </label>
+                            </li>
+                            <li class="checkout__payment-list-item">
+                                <label class="checkout__payment-card">
+                                    <input class="checkout__payment-card-input" type="radio" name="payment" value="2" />
+                                    <span class="checkout__payment-card-mark">
+
+                                    </span>
+                                    <span class="checkout__payment-card-title">
+                                        Яндекс Пэй
+                                    </span>
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="checkout__customer">
+                        <h3 class="checkout__customer-heading">
+                            Покупатель
+                        </h3>
+                        <div class="checkout__customer-fields">
+                            <div class="checkout__customer-field">
+                                <div class="text-input-label">
+                                    Ф.И.О.<span>*</span>
+                                </div>
+                                <div class="text-input-wrapper">
+                                    <input type="text" class="text-input" name="login" required=""
+                                        value="Константин Константинопольский">
+                                </div>
+                            </div>
+                            <div class="checkout__customer-field">
+                                <div class="text-input-label">
+                                    Телефон<span>*</span>
+                                </div>
+                                <div class="text-input-wrapper">
+                                    <input type="tel" class="text-input js-phone-input" name="login" required=""
+                                        data-parsley-phone="" value="+7 499 123-45-67">
+                                </div>
+                            </div>
+                            <div class="checkout__customer-field">
+                                <div class="text-input-label">
+                                    E-mail<span>*</span>
+                                </div>
+                                <div class="text-input-wrapper">
+                                    <input type="email" class="text-input" name="login" required=""
+                                        value="mail@mail.ru">
+                                </div>
+                            </div>
+                            <div class="checkout__customer-field checkout__customer-field--textarea">
+                                <div class="text-input-label">
+                                    Адрес доставки<span>*</span>
+                                </div>
+                                <div class="text-input-wrapper">
+                                    <textarea name="address" class="text-input" required="">г. Москва, Малый Левшинский пер. 5, #SMSK160
+                                        </textarea>
+                                </div>
+                            </div>
+                            <div class="checkout__customer-field checkout__customer-field--textarea">
+                                <div class="text-input-label">
+                                    Комментарий к заказу
+                                </div>
+                                <div class="text-input-wrapper">
+                                    <textarea name="comment" class="text-input"
+                                        placeholder="Если у вас есть дисконтная карта, укажите ее номер в этом поле">
+
+                                        </textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="checkout__products">
+                        <h3 class="checkout__products-heading">
+                            Товары в заказе
+                        </h3>
+                        <div class="account__orders-card-header account__orders-card-header--with-discount">
+                            <div class="account__orders-card-header-item">
+                                Наименование
+                            </div>
+                            <div class="account__orders-card-header-item">
+                                Скидка
+                            </div>
+                            <div class="account__orders-card-header-item">
+                                Цена
+                            </div>
+                            <div class="account__orders-card-header-item">
+                                Кол-во
+                            </div>
+                            <div class="account__orders-card-header-item">
+                                Сумма
+                            </div>
+                        </div>
+                        <ul class="account__orders-card-list">
+                            <li class="account__orders-card-list-item">
+                                <div class="account__orders-card-product account__orders-card-product--with-discount">
+                                    <div class="account__orders-card-product-left-wrapper">
+                                        <div class="account__orders-card-product-image-container">
+                                            <img src="/images/order-product.webp" alt=""
+                                                class="account__orders-card-product-image">
+                                        </div>
+                                        <div class="account__orders-card-product-content">
+                                            <h3 class="account__orders-card-product-title">
+                                                Жакет Oui 85985
+                                            </h3>
+                                            <div class="account__orders-card-product-code">
+                                                Артикул: 85985
+                                            </div>
+                                            <div class="account__orders-card-product-row">
+                                                <div class="account__orders-card-product-color">
+                                                    Цвет:
+                                                    <div class="account__orders-card-product-color-mark"
+                                                        style="--product-color: #1F3250;">
+
+                                                    </div>
+                                                </div>
+                                                <div class="account__orders-card-product-size">
+                                                    Размер:
+                                                    <div class="account__orders-card-product-size-mark">
+                                                        44
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                    <div class="account__orders-card-product-price-wrapper">
+                                        <div class="account__orders-card-product-price">
+                                            11 690 ₽
+                                        </div>
+                                    </div>
+                                    <div class="account__orders-card-product-quantity">
+                                        1
+                                    </div>
+                                    <div class="account__orders-card-product-price-discount">
+                                        10%
+                                    </div>
+                                    <div class="account__orders-card-product-total">
+                                        11 690 ₽
+                                    </div>
+
+                                </div>
+                            </li>
+                            <li class="account__orders-card-list-item">
+                                <div class="account__orders-card-product account__orders-card-product--with-discount">
+                                    <div class="account__orders-card-product-left-wrapper">
+                                        <div class="account__orders-card-product-image-container">
+                                            <img src="/images/order-product.webp" alt=""
+                                                class="account__orders-card-product-image">
+                                        </div>
+                                        <div class="account__orders-card-product-content">
+                                            <h3 class="account__orders-card-product-title">
+                                                Жакет Oui 85985
+                                            </h3>
+                                            <div class="account__orders-card-product-code">
+                                                Артикул: 85985
+                                            </div>
+                                            <div class="account__orders-card-product-row">
+                                                <div class="account__orders-card-product-color">
+                                                    Цвет:
+                                                    <div class="account__orders-card-product-color-mark"
+                                                        style="--product-color: #1F3250;">
+
+                                                    </div>
+                                                </div>
+                                                <div class="account__orders-card-product-size">
+                                                    Размер:
+                                                    <div class="account__orders-card-product-size-mark">
+                                                        44
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                    <div class="account__orders-card-product-price-discount">
+                                        10%
+                                    </div>
+                                    <div class="account__orders-card-product-price-wrapper">
+                                        <div class="account__orders-card-product-price">
+                                            11 690 ₽
+                                        </div>
+                                        <div class="account__orders-card-product-price-old">
+                                            13 600 ₽
+                                        </div>
+
+                                    </div>
+                                    <div class="account__orders-card-product-quantity">
+                                        1
+                                    </div>
+                                    <div class="account__orders-card-product-total">
+                                        11 690 ₽
+                                    </div>
+
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="checkout__controls">
+                        <button class="checkout__submit" type="submit">
+                            Оформить заказ
+                        </button>
+                        <div class="checkout__policy">
+                            Нажимая на кнопку «Отправить», вы даете согласие с <a href="#"
+                                class="checkout__policy-link">политикой конфиденциальности</a>
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+            <div class="checkout__sidebar">
+                <div class="checkout__order-summary">
+                    <h3 class="checkout__order-summary-heading">
+                        Ваш заказ
+                    </h3>
+                    <ul class="checkout__order-summary-list">
+                        <li class="checkout__order-summary-list-item">
+                            <div class="checkout__order-summary-item">
+                                <div class="checkout__order-summary-item-key">
+                                    Товаров на:
+                                </div>
+                                <div class="checkout__order-summary-item-value">
+                                    <div class="checkout__order-summary-item-price">
+                                        47 556 ₽
+                                    </div>
+                                    <div class="checkout__order-summary-item-old-price">
+                                        53 600 ₽
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="checkout__order-summary-list-item">
+                            <div class="checkout__order-summary-item">
+                                <div class="checkout__order-summary-item-key">
+                                    Общий вес:
+                                </div>
+                                <div class="checkout__order-summary-item-value">
+                                    <div class="checkout__order-summary-item-weight">
+                                        2 кг.
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="checkout__order-summary-list-item">
+                            <div class="checkout__order-summary-item">
+                                <div class="checkout__order-summary-item-key">
+                                    Доставка:
+                                </div>
+                                <div class="checkout__order-summary-item-value">
+                                    <div class="checkout__order-summary-item-delivery">
+                                        Бесплатно
+                                    </div>
+                                    <div class="checkout__order-summary-item-old-price">
+                                        891 ₽
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="checkout__order-summary-list-item">
+                            <div class="checkout__order-summary-item">
+                                <div class="checkout__order-summary-item-key">
+                                    Экономия:
+                                </div>
+                                <div class="checkout__order-summary-item-value">
+                                    <div class="checkout__order-summary-item-discount">
+                                        2000 ₽
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="checkout__order-summary-tablet-wrapper">
+
+
+                        <div class="checkout__order-summary-total">
+                            <div class="checkout__order-summary-total-title">
+                                Итого:
+                            </div>
+                            <div class="checkout__order-summary-total-price">
+                                47 556 ₽
+                            </div>
+                        </div>
+                        <button class="checkout__order-summary-submit" type="submit" form="checkout-form">
+                            Оформить заказ
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
