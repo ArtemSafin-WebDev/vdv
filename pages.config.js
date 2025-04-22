@@ -10,6 +10,7 @@ import product from "./pages-data/product";
 import account from "./pages-data/account";
 import mailing from "./pages-data/mailing";
 import catalog from "./pages-data/catalog";
+import orders from "./pages-data/orders";
 const pagesConfig = {
   ...home,
   ...news,
@@ -23,6 +24,7 @@ const pagesConfig = {
   ...account,
   ...mailing,
   ...catalog,
+  ...orders,
 };
 
 export default pagesConfig;

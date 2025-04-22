@@ -499,3 +499,702 @@
     }
   }
 }
+
+.account__orders {
+  margin-top: 5rem;
+
+  @include media.breakpoint(tablet) {
+    margin-top: 3rem;
+  }
+
+  @include media.breakpoint(mobile) {
+    margin-top: 2rem;
+  }
+}
+
+.account__orders-header {
+  display: grid;
+  grid-gap: 3rem;
+  grid-template-columns: repeat(4, minmax(0, 1fr)) minmax(0, 2fr);
+  margin-bottom: 3rem;
+  align-items: center;
+  @include media.breakpoint(tablet) {
+    margin-bottom: 1.2rem;
+    grid-gap: 2rem;
+  }
+  @include media.breakpoint(mobile) {
+    display: none;
+  }
+}
+
+.account__orders-header-item {
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+  color: #6f7a87;
+  @include media.breakpoint(tablet) {
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+  }
+}
+
+.account__orders-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  @include media.breakpoint(mobile) {
+    gap: 1rem;
+  }
+}
+
+.account__orders-card {
+  border-radius: 1.2rem;
+  border: 1px solid #f2f4f6;
+  transition: border-color 0.2s;
+
+  &.active {
+    border-color: #a9b0b9;
+  }
+  @include media.breakpoint(mobile) {
+    padding: 2rem;
+  }
+}
+
+.account__orders-card-top {
+  display: grid;
+  grid-gap: 3rem;
+  grid-template-columns: repeat(4, minmax(0, 1fr)) minmax(0, 2fr);
+  grid-template-areas: "number date amount status payment";
+  padding: 2.9rem 0;
+
+  @include media.breakpoint(tablet) {
+    grid-gap: 2rem;
+    padding: 2.4rem 0;
+    align-items: center;
+  }
+
+  @include media.breakpoint(mobile) {
+    padding: 0;
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 1rem;
+    row-gap: 0.7rem;
+  }
+}
+
+.account__orders-card-number {
+  grid-area: number;
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-left: 2.7rem;
+  @include media.breakpoint(tablet) {
+    margin-left: 2rem;
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  @include media.breakpoint(mobile) {
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    margin: 0;
+
+    &::before {
+      content: attr(data-text);
+      font-size: 1rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 140%;
+      color: #a9b0b9;
+    }
+  }
+}
+
+.account__orders-card-date {
+  grid-area: date;
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  @include media.breakpoint(tablet) {
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  @include media.breakpoint(mobile) {
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+
+    &::before {
+      content: attr(data-text);
+      font-size: 1rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 140%;
+      color: #a9b0b9;
+    }
+  }
+}
+
+.account__orders-card-amount {
+  grid-area: amount;
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  @include media.breakpoint(tablet) {
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  @include media.breakpoint(mobile) {
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+
+    &::before {
+      content: attr(data-text);
+      font-size: 1rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 140%;
+      color: #a9b0b9;
+    }
+  }
+}
+
+.account__orders-card-status {
+  grid-area: status;
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+
+  &--complete {
+    color: #90b57d;
+  }
+
+  &--cancelled {
+    color: #a9b0b9;
+  }
+
+  @include media.breakpoint(tablet) {
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  @include media.breakpoint(mobile) {
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+
+    &::before {
+      content: attr(data-text);
+      font-size: 1rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 140%;
+      color: #a9b0b9;
+    }
+  }
+}
+
+.account__orders-card-btn-wrapper {
+  grid-area: payment;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  justify-content: space-between;
+  margin-right: 2.7rem;
+  @include media.breakpoint(tablet) {
+    margin-right: 2rem;
+  }
+
+  @include media.breakpoint(mobile) {
+    display: contents;
+  }
+}
+
+.account__orders-card-payment {
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  @include media.breakpoint(tablet) {
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  @include media.breakpoint(mobile) {
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+
+    &::before {
+      content: attr(data-text);
+      font-size: 1rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 140%;
+      color: #a9b0b9;
+    }
+  }
+}
+
+.account__orders-card-btn {
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+  color: var(--primary-color);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+  text-decoration-style: dashed;
+  text-align: right;
+  transition: color 0.2s, text-decoration-color 0.2s;
+  &:link,
+  &:visited {
+    color: var(--primary-color);
+  }
+
+  span {
+    &:nth-child(2) {
+      display: none;
+    }
+  }
+
+  .account__orders-card.active & {
+    color: #a9b0b9;
+    span {
+      &:nth-child(1) {
+        display: none;
+      }
+      &:nth-child(2) {
+        display: inline;
+      }
+    }
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      text-decoration-color: transparent;
+    }
+  }
+
+  @include media.breakpoint(tablet) {
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  @include media.breakpoint(mobile) {
+    width: 100%;
+    margin-top: 0.3rem;
+  }
+}
+
+.account__orders-card-content {
+  padding: 0 2.7rem;
+  padding-top: 2.4rem;
+  padding-bottom: 2.8rem;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  @include media.breakpoint(tablet) {
+    padding: 0 2rem;
+    padding-top: 2rem;
+    padding-bottom: 2.4rem;
+  }
+
+  @include media.breakpoint(mobile) {
+    padding: 0;
+    padding-top: 3rem;
+    padding-bottom: 2rem;
+  }
+
+  &::before {
+    content: "";
+    top: 0;
+    left: 2.7rem;
+    right: 2.7rem;
+    height: 1px;
+    background-color: #f2f4f6;
+    pointer-events: none;
+    position: absolute;
+    @include media.breakpoint(tablet) {
+      display: none;
+    }
+  }
+}
+
+.account__orders-card-header {
+  display: grid;
+  grid-template-columns: 3fr 1fr 1fr 2fr;
+  grid-gap: 3rem;
+  margin-bottom: 2rem;
+  @include media.breakpoint(tablet) {
+    grid-gap: 2rem;
+  }
+
+  @include media.breakpoint(mobile) {
+    display: none;
+  }
+}
+
+.account__orders-card-header-item {
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+  color: #6f7a87;
+}
+
+.account__orders-card-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.account__orders-card-list-item {
+  border-bottom: 1px solid #f2f4f6;
+  &:last-child {
+    border: none;
+  }
+
+  @include media.breakpoint(mobile) {
+    border: none;
+  }
+}
+
+.account__orders-card-product {
+  padding: 2rem 0;
+  display: grid;
+  grid-template-columns: 3fr 1fr 1fr 2fr;
+  grid-gap: 3rem;
+  grid-template-areas: "leftwrapper price quantity total";
+  align-items: center;
+  @include media.breakpoint(tablet) {
+    grid-gap: 2rem;
+  }
+
+  @include media.breakpoint(mobile) {
+    padding: 1.6rem 0;
+    grid-template-columns: auto auto 1fr auto;
+    grid-template-areas: "image content content content" "discount price quantity total";
+    grid-gap: 1rem;
+    grid-row-gap: 2.4rem;
+    align-items: center;
+  }
+
+  .account__orders-card-list-item:first-child & {
+    padding-top: 0;
+  }
+
+  .account__orders-card-list-item:last-child & {
+    padding-bottom: 0;
+  }
+}
+
+.account__orders-card-product-left-wrapper {
+  grid-area: leftwrapper;
+  display: flex;
+  align-items: flex-start;
+  gap: 2.2rem;
+
+  @include media.breakpoint(tablet) {
+    gap: 2rem;
+  }
+
+  @include media.breakpoint(mobile) {
+    display: contents;
+  }
+}
+
+.account__orders-card-product-image-container {
+  position: relative;
+  aspect-ratio: 88 / 100;
+  border-radius: 0.8rem;
+  border: 1px solid #f2f4f6;
+  width: 8.8rem;
+  flex-shrink: 0;
+  overflow: hidden;
+
+  @include media.breakpoint(tablet) {
+    width: 7rem;
+  }
+
+  @include media.breakpoint(mobile) {
+    width: 6rem;
+    grid-area: image;
+  }
+}
+
+.account__orders-card-product-image {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center center;
+}
+
+.account__orders-card-product-content {
+  display: flex;
+  flex-direction: column;
+
+  @include media.breakpoint(mobile) {
+    grid-area: content;
+  }
+}
+
+.account__orders-card-product-title {
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  @include media.breakpoint(tablet) {
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+}
+
+.account__orders-card-product-code {
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+  color: #6f7a87;
+  margin-top: 1.1rem;
+  @include media.breakpoint(tablet) {
+    margin-top: 1.2rem;
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+  }
+
+  @include media.breakpoint(mobile) {
+    margin-top: 0.8rem;
+  }
+}
+
+.account__orders-card-product-row {
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1.8rem;
+  @include media.breakpoint(tablet) {
+    gap: 1.2rem;
+  }
+
+  @include media.breakpoint(mobile) {
+    margin-top: 0.8rem;
+  }
+}
+
+.account__orders-card-product-color {
+  font-size: 1.4rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 180%;
+  color: #6f7a87;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  @include media.breakpoint(tablet) {
+    font-size: 1.2rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 180%;
+    gap: 0.5rem;
+  }
+}
+
+.account__orders-card-product-color-mark {
+  flex-shrink: 0;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background-color: var(--product-color, black);
+}
+
+.account__orders-card-product-size {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  font-size: 1.4rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 180%;
+  color: #6f7a87;
+  @include media.breakpoint(tablet) {
+    font-size: 1.2rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 180%;
+  }
+}
+
+.account__orders-card-product-size-mark {
+  display: grid;
+  place-items: center;
+  border-radius: 0.6rem;
+  border: 1px solid #a9b0b9;
+  height: 2.8rem;
+  text-align: center;
+  min-width: 3.3rem;
+  white-space: nowrap;
+  flex-shrink: 0;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  color: #202425;
+}
+
+.account__orders-card-product-price-wrapper {
+  grid-area: price;
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+
+  @include media.breakpoint(mobile) {
+    display: contents;
+  }
+}
+
+.account__orders-card-product-price {
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+
+  @include media.breakpoint(mobile) {
+    grid-area: price;
+    text-align: center;
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+  }
+}
+
+.account__orders-card-product-price-old {
+  font-size: 1.4rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  text-decoration-line: line-through;
+  text-decoration-color: currentColor;
+  text-decoration-thickness: 1px;
+  color: #a9b0b9;
+  @include media.breakpoint(mobile) {
+    display: none;
+  }
+}
+
+.account__orders-card-product-quantity {
+  grid-area: quantity;
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  @include media.breakpoint(mobile) {
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    text-align: center;
+  }
+}
+
+.account__orders-card-product-total {
+  grid-area: total;
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  @include media.breakpoint(mobile) {
+    text-align: center;
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+}
+
+.account__orders-card-product-price-discount {
+  display: none;
+  font-size: 1.4rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+  padding: 0.4rem 1.6rem;
+  color: #6f7a87;
+  border-radius: 3rem;
+  background: #dfffce;
+  text-align: center;
+
+  @include media.breakpoint(mobile) {
+    justify-self: stretch;
+    align-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.account__orders-card-dropdown {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.5s;
+
+  .account__orders-card.active & {
+    grid-template-rows: 1fr;
+  }
+}
+
+.account__orders-card-dropdown-inner {
+  overflow: hidden;
+}
