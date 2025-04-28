@@ -419,6 +419,7 @@
   filter: drop-shadow(0rem 0.4rem 0.4rem rgba(0, 0, 0, 0.25));
   padding: 2rem 1.7rem;
   position: relative;
+  border-radius: 0.6rem;
   &::before {
     content: "";
     width: var(--triangle-size, 1.2rem);
@@ -561,6 +562,112 @@
     justify-self: flex-end;
     gap: 0.3rem;
     grid-area: phones;
+  }
+}
+
+.page-header__phone-wrapper {
+  position: relative;
+  z-index: 50;
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      .page-header__phone-dropdown {
+        opacity: 1;
+        visibility: inherit;
+        transition: opacity 0.2s, visibility 0.2s;
+      }
+    }
+  }
+
+  &.phones-list-shown {
+    .page-header__phone-dropdown {
+      opacity: 1;
+      visibility: inherit;
+      transition: opacity 0.2s, visibility 0.2s;
+    }
+  }
+}
+
+.page-header__phone-dropdown {
+  position: absolute;
+  right: -2.5rem;
+  top: 100%;
+  padding-top: 0.6rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s, visibility 0s linear 0.2s;
+  z-index: 30;
+  width: max-content;
+  --triangle-size: 1.2rem;
+
+  @include media.breakpoint(tablet) {
+    right: -1.2rem;
+  }
+}
+
+.page-header__phone-dropdown-inner {
+  background-color: white;
+  border: 1px solid #f2f4f6;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+  filter: drop-shadow(0rem 0.4rem 0.4rem rgba(0, 0, 0, 0.25));
+  padding: 1.4rem 1.4rem;
+  padding-right: 3.2rem;
+  padding-left: 1.9rem;
+  position: relative;
+  border-radius: 0.6rem;
+  @include media.breakpoint(tablet) {
+    padding: 1.2rem;
+  }
+  &::before {
+    content: "";
+    width: var(--triangle-size, 1.2rem);
+    height: var(--triangle-size, 1.2rem);
+    background-color: #fff;
+    border: 1px solid #f2f4f6;
+    margin-bottom: calc(-1 * var(--triangle-size, 1.2rem) / 2);
+    border-right: none;
+    border-bottom: none;
+    transform: rotate(0deg);
+    position: absolute;
+    right: 2.7rem;
+    transform: translateX(50%) rotate(45deg);
+    bottom: 100%;
+    @include media.breakpoint(tablet) {
+      right: 1.4rem;
+    }
+  }
+}
+
+.page-header__phone-inner-link {
+  display: block;
+  font-size: 2.2rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 90%;
+  text-transform: uppercase;
+
+  @include media.breakpoint(tablet) {
+    font-size: 1.8rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 90%;
+    text-transform: uppercase;
+  }
+
+  @include media.breakpoint(mobile) {
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 90%;
+    text-transform: uppercase;
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      color: var(--primary-color);
+    }
   }
 }
 
@@ -1024,23 +1131,6 @@
 
     &:only-of-type {
       padding: 2rem 0;
-      &::after {
-        content: "";
-        flex-shrink: 0;
-        width: 1.7rem;
-        height: 1rem;
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center;
-        background-image: url("../images/arrow-down.svg");
-        transition: transform 0.2s;
-      }
-    }
-
-    .page-header__catalog-block.active & {
-      &::after {
-        transform: rotate(180deg);
-      }
     }
 
     &[href]:not(:only-of-type) {
@@ -1057,6 +1147,37 @@
     @media (hover: hover) and (pointer: fine) {
       &:hover {
         color: var(--primary-color-hover);
+      }
+    }
+  }
+}
+.page-header__catalog-block-arrow {
+  display: none;
+
+  @include media.breakpoint(mobile) {
+    display: block;
+    flex-shrink: 0;
+    align-self: stretch;
+    display: grid;
+    place-items: center;
+    margin: -2rem 0;
+    padding-left: 4rem;
+    &::after {
+      content: "";
+      flex-shrink: 0;
+      width: 1.7rem;
+      height: 1rem;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-image: url("../images/arrow-down.svg");
+      transition: transform 0.2s;
+      display: block;
+    }
+
+    .page-header__catalog-block.active & {
+      &::after {
+        transform: rotate(180deg);
       }
     }
   }

@@ -71,6 +71,22 @@ document.addEventListener("DOMContentLoaded", function () {
         userBtn.parentElement.classList.remove("user-menu-shown");
       });
     }
+    const phonesBtn = header.querySelector(".page-header__phone-link");
+    if (phonesBtn) {
+      phonesBtn.addEventListener("click", function (e) {
+        e.preventDefault();
+        phonesBtn.parentElement.classList.toggle("phones-list-shown");
+      });
+      document.addEventListener("click", (event) => {
+        if (
+          event.target.matches(".page-header__phone-wrapper") ||
+          event.target.closest(".page-header__phone-wrapper")
+        ) {
+          return;
+        }
+        phonesBtn.parentElement.classList.remove("phones-list-shown");
+      });
+    }
   }
 
   const burger = header.querySelector(".page-header__burger");
@@ -108,6 +124,8 @@ document.addEventListener("DOMContentLoaded", function () {
     btn.addEventListener("click", (event) => {
       console.log("CLICKed");
       if (!window.matchMedia("(max-width: 576px)").matches) return;
+      console.log("Target", event.target);
+      if (!event.target.matches(".page-header__catalog-block-arrow")) return;
       event.preventDefault();
       catalogBlocks.forEach((otherBlock) => {
         if (otherBlock === block) return;

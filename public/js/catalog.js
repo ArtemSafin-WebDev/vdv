@@ -9,6 +9,8 @@ document.addEventListener("DOMContentLoaded", () => {
   sidebarCards.forEach((card) => {
     const btn = card.querySelector(".catalog__categories-card-btn");
     btn?.addEventListener("click", (e) => {
+      console.log("BTN TARGET", e.target);
+      if (!e.target.matches(".catalog__categories-card-arrow")) return;
       e.preventDefault();
       sidebarCards.forEach((otherCard) => {
         if (otherCard === card) return;

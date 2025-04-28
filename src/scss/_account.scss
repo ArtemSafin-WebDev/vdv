@@ -1221,3 +1221,69 @@
 .account__orders-card-dropdown-inner {
   overflow: hidden;
 }
+
+.account__user-data-radios {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+.account__user-data-radio {
+  flex-shrink: 0;
+  user-select: none;
+  cursor: pointer;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 140%;
+  display: flex;
+  align-items: center;
+  gap: 1.4rem;
+
+  @include media.breakpoint(tablet) {
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 140%;
+    gap: 1.4rem;
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      .account__user-data-radio-input:not(:checked)
+        ~ .account__user-data-radio-mark {
+        border-color: #a9b0b9;
+      }
+    }
+  }
+}
+
+.account__user-data-radio-input {
+  display: none;
+}
+
+.account__user-data-radio-mark {
+  flex-shrink: 0;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  border: 1px solid #f2f4f6;
+  transition: border-color 0.2s;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 1.3rem;
+    height: 1.3rem;
+    border-radius: 50%;
+    opacity: 0;
+    transition: opacity 0.2s;
+    background-color: var(--primary-color);
+  }
+
+  .account__user-data-radio-input:checked ~ &::before {
+    opacity: 1;
+  }
+}
