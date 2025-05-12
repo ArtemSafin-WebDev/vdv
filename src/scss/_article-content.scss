@@ -1,0 +1,258 @@
+@use "media";
+@use "utils";
+
+.article-content {
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+  @include media.breakpoint(tablet) {
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+  }
+
+  @include media.breakpoint(mobile) {
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+    order: -20;
+  }
+
+  & > * {
+    all: revert;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 2rem;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  h1 {
+    font-size: 4.6rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 90%;
+    margin-top: 1em;
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    @include media.breakpoint(tablet) {
+      font-size: 3rem;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 90%;
+    }
+
+    @include media.breakpoint(mobile) {
+      font-size: 2.2rem;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 120%;
+    }
+  }
+
+  h2 {
+    font-size: 3.8rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 90%;
+    margin-top: 1em;
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    @include media.breakpoint(tablet) {
+      font-size: 2.2rem;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 120%;
+    }
+
+    @include media.breakpoint(mobile) {
+      font-size: 1.8rem;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 120%;
+    }
+  }
+
+  h3 {
+    font-size: 2.8rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 90%;
+    margin-top: 1em;
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    @include media.breakpoint(tablet) {
+      font-size: 2.2rem;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 90%;
+    }
+
+    @include media.breakpoint(mobile) {
+      font-size: 1.8rem;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 90%;
+      text-transform: uppercase;
+    }
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    list-style: none;
+
+    & > li {
+      padding-left: 3.6rem;
+      position: relative;
+      @include media.breakpoint(tablet) {
+        padding-left: 2.4rem;
+      }
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0.7em;
+        width: 1.4rem;
+        height: 1.4rem;
+        border: 2px solid var(--primary-color);
+        background-color: #fff;
+        transform: translateY(-50%);
+        border-radius: 50%;
+        @include media.breakpoint(tablet) {
+          top: 0.73em;
+          width: 1rem;
+          height: 1rem;
+        }
+      }
+    }
+  }
+
+  ol {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    list-style: none;
+    & > li {
+      padding-left: 3.6rem;
+      position: relative;
+      @include media.breakpoint(tablet) {
+        padding-left: 2.4rem;
+      }
+      &::before {
+        content: counter(ordered-list);
+        position: absolute;
+        font: inherit;
+        font-weight: 700;
+        color: var(--primary-color);
+        left: 0;
+        top: 0;
+      }
+    }
+  }
+
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    thead {
+      th {
+        font-size: 1.8rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 140%;
+        color: #6f7a87;
+        text-align: left;
+        vertical-align: top;
+        padding: 1.5rem 2.6rem;
+        border-bottom: 1px solid rgba(#a9b0b9, 0.5);
+
+        @include media.breakpoint(tablet) {
+          font-size: 1.6rem;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 140%;
+        }
+
+        @include media.breakpoint(mobile) {
+          font-size: 1.4rem;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 140%;
+        }
+      }
+    }
+
+    tbody {
+      td {
+        font-size: 1.8rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 140%;
+        color: #6f7a87;
+        padding: 1.5rem 2.6rem;
+        text-align: left;
+        vertical-align: top;
+        @include media.breakpoint(tablet) {
+          font-size: 1.6rem;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 140%;
+        }
+
+        @include media.breakpoint(mobile) {
+          font-size: 1.4rem;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 140%;
+        }
+      }
+
+      tr {
+        &:nth-child(odd) {
+          td {
+            background-color: rgba(#a9b0b9, 0.2);
+          }
+        }
+        &:nth-child(even) {
+          td {
+            background-color: rgba(#a9b0b9, 0.1);
+          }
+        }
+      }
+    }
+  }
+}
+
+.table-wrapper {
+  overflow-y: hidden;
+  &::-webkit-scrollbar {
+    background-color: white;
+    height: 0.4rem;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: var(--primary-color);
+  }
+
+  &::-webkit-scrollbar-button {
+    display: none;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: white;
+  }
+}
