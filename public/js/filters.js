@@ -36,14 +36,16 @@ document.addEventListener("DOMContentLoaded", () => {
         select.classList.toggle("open");
       });
 
-      if (window.matchMedia("(hover: hover) and (pointer: fine)").matches) {
-        wrapper.addEventListener("mouseenter", () => {
-          select.classList.add("open");
-        });
-        wrapper.addEventListener("mouseleave", () => {
-          select.classList.remove("open");
-        });
-      }
+      wrapper.addEventListener("mouseenter", () => {
+        if (!window.matchMedia("(hover: hover) and (pointer: fine)").matches)
+          return;
+        select.classList.add("open");
+      });
+      wrapper.addEventListener("mouseleave", () => {
+        if (!window.matchMedia("(hover: hover) and (pointer: fine)").matches)
+          return;
+        select.classList.remove("open");
+      });
 
       document.addEventListener("click", (event) => {
         if (

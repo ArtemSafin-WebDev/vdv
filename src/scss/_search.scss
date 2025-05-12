@@ -1,0 +1,229 @@
+@use "media";
+@use "utils";
+
+.search {
+  @include utils.blockWrapper;
+  margin-bottom: 12rem;
+  padding-top: 3.6rem;
+  @include media.breakpoint(tablet) {
+    margin-bottom: 4.6rem;
+    padding-top: 2.8rem;
+  }
+
+  @include media.breakpoint(mobile) {
+    padding-top: 1.8rem;
+    margin-bottom: 4rem;
+  }
+}
+
+.search__content {
+  @include utils.blockContent;
+  display: flex;
+  flex-direction: column;
+}
+
+.search__heading {
+  font-size: 3.8rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 90%;
+  text-transform: uppercase;
+  margin-top: 4rem;
+  @include media.breakpoint(tablet) {
+    font-size: 3rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 90%;
+    text-transform: uppercase;
+    margin-top: 3rem;
+  }
+
+  @include media.breakpoint(mobile) {
+    font-size: 2.2rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 1rem;
+  }
+}
+
+.search__form {
+  margin-top: 4.7rem;
+  @include media.breakpoint(tablet) {
+    margin-top: 3rem;
+  }
+
+  @include media.breakpoint(mobile) {
+    margin-top: 2rem;
+  }
+}
+
+.search__form-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  @include media.breakpoint(tablet) {
+    gap: 1rem;
+  }
+
+  @include media.breakpoint(mobile) {
+    padding: 1.2rem 1.5rem;
+    padding-right: 1rem;
+    border-radius: 0.6rem;
+    border: 1px solid #f2f4f6;
+    padding-left: 0;
+  }
+}
+
+.search__form-input {
+  width: 30%;
+  flex-grow: 1;
+  height: 6rem;
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+  color: #6f7a87;
+  padding: 0 2.7rem;
+  border-radius: 0.6rem;
+  border: 1px solid #f2f4f6;
+  transition: border-color 0.2s, box-shadow 0.2s;
+
+  &:not(:focus):not(.parsley-error) {
+    &:hover {
+      border-color: #a9b0b9;
+      box-shadow: 0px 0px 0.98rem 0px rgba(255, 209, 60, 0.25) inset;
+    }
+  }
+
+  &:not(.parsley-error):focus {
+    border-color: #a9b0b9;
+  }
+  @include media.breakpoint(tablet) {
+    height: 5rem;
+    padding: 0 2.4rem;
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+  }
+
+  @include media.breakpoint(mobile) {
+    border-radius: 0;
+    border: none;
+    padding: 0 1.8rem;
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+    height: auto;
+  }
+}
+
+.search__form-submit {
+  flex-shrink: 0;
+  text-align: center;
+  border-radius: 0.6rem;
+  border: 0.2rem solid var(--primary-color);
+  display: grid;
+  place-items: center;
+  font-size: 1.4rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 90%;
+  text-transform: uppercase;
+  padding: 2.1rem 4.3rem;
+  transition: color 0.2s, background-color 0.2s, border-color 0.2s;
+
+  svg {
+    display: none;
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      background-color: var(--primary-color);
+      color: white;
+    }
+  }
+
+  @include media.breakpoint(tablet) {
+    padding: 1.65rem 4.3rem;
+  }
+  @include media.breakpoint(mobile) {
+    all: revert;
+    background-color: transparent;
+    border: none;
+    width: 2rem;
+    height: 2rem;
+    padding: 0;
+    svg {
+      display: block;
+      width: 100%;
+      height: 100%;
+      fill: #a9b0b9;
+    }
+  }
+}
+
+.search__results-status {
+  font-size: 2.2rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 90%;
+  margin-top: 2.9rem;
+
+  span {
+    font-weight: 600;
+  }
+
+  @include media.breakpoint(tablet) {
+    margin-top: 1.9rem;
+    font-size: 1.8rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 90%;
+  }
+
+  @include media.breakpoint(mobile) {
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 140%;
+    margin-top: 1.9rem;
+  }
+}
+
+.search__form-submit-text {
+  @include media.breakpoint(mobile) {
+    display: none;
+  }
+}
+
+.search__filters {
+  margin-top: 5rem;
+
+  @include media.breakpoint(mobile) {
+    margin-top: 3rem;
+  }
+}
+
+.search__list {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  margin-top: 3.5rem;
+  grid-gap: 3rem;
+  @include media.breakpoint(tablet) {
+    grid-gap: 2rem;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-row-gap: 3.5rem;
+    margin-top: 2rem;
+  }
+  @include media.breakpoint(mobile) {
+    grid-gap: 2rem;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-row-gap: 3rem;
+    margin-top: 1rem;
+  }
+}

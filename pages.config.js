@@ -12,6 +12,7 @@ import mailing from "./pages-data/mailing";
 import catalog from "./pages-data/catalog";
 import orders from "./pages-data/orders";
 import checkout from "./pages-data/checkout";
+import search from "./pages-data/search";
 const pagesConfig = {
   ...home,
   ...news,
@@ -27,6 +28,7 @@ const pagesConfig = {
   ...catalog,
   ...orders,
   ...checkout,
+  ...search,
 };
 
 export default pagesConfig;

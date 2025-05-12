@@ -1,0 +1,963 @@
+<section class="search">
+    <div class="search__content">
+        <div class="breadcrumbs">
+            <ul class="breadcrumbs__list">
+                <li class="breadcrumbs__list-item">
+                    <a href="#" class="breadcrumbs__link">
+                        <span>Главная</span>
+                    </a>
+                </li>
+                <li class="breadcrumbs__list-item">
+                    <a href="#" class="breadcrumbs__link active">
+                        Поиск
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <h1 class="search__heading">
+            Поиск
+        </h1>
+        <form action="/" class="search__form" method="GET">
+            <div class="search__form-wrapper">
+                <input type="search" class="search__form-input" placeholder="Поиск" value="Брюки">
+                <button class="search__form-submit" type="submit">
+                    <span class="search__form-submit-text">
+                        Поиск
+                    </span>
+                    <svg width="14" height="14" aria-hidden="true">
+                        <use xlink:href="#search-btn"></use>
+                    </svg>
+                </button>
+            </div>
+            <div class="search__results-status">
+                Результаты поиска по запросу <span>Ботинки</span>
+            </div>
+            <div class="search__filters">
+                {{> search-filters }}
+            </div>
+        </form>
+        <ul class="search__list">
+            <li class="search__list-item">
+                <div class="product-card">
+                    <div class="product-card__top">
+                        <a href="#" class="product-card__wrapper">
+                            <div class="product-card__slider">
+                                <div class="swiper">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <div class="product-card__image-card">
+                                                <img src="/images/popular/4.webp" alt="" class="product-card__image">
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="product-card__image-card">
+                                                <img src="/images/popular/3.webp" alt="" class="product-card__image">
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="product-card__image-card">
+                                                <img src="/images/popular/4.webp" alt="" class="product-card__image">
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="product-card__image-card">
+                                                <img src="/images/popular/3.webp" alt="" class="product-card__image">
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="product-card__image-card">
+                                                <img src="/images/popular/4.webp" alt="" class="product-card__image">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="product-card__slider-pagination">
+
+                                </div>
+                            </div>
+                        </a>
+                        <div class="product-card__top-inner-content">
+                            <div class="product-card__tags">
+                                <div class="product-card__tag" style="--tag-color: #9ACD3A">
+                                    NEW
+                                </div>
+                            </div>
+
+                            <a href="#" class="product-card__like-btn">
+                                <svg width="14" height="14" aria-hidden="true">
+                                    <use xlink:href="#like"></use>
+                                </svg>
+                            </a>
+                            <a href="#product-modal" class="product-card__view-btn js-open-modal">
+                                Быстрый просмотр
+                            </a>
+                        </div>
+                    </div>
+                    <a href="#" class="product-card__title">
+                        Платье Rabe
+                    </a>
+                    <form method="POST" class="product-card__row">
+                        <div class="product-card__left">
+                            <div class="product-card__price-wrapper">
+                                <div class="product-card__price">
+                                    9 990 ₽
+                                </div>
+                            </div>
+                            <div class="product-card__variants">
+                                <div class="product-card__variant">
+                                    <div class="product-card__variant-title">
+                                        Цвета
+                                    </div>
+                                    <div class="product-card__variant-colors">
+                                        <label class="product-card__variant-color">
+                                            <input type="radio" name="color" value="#1F3250"
+                                                class="product-card__variant-color-input" checked>
+                                            <span class="product-card__variant-color-content"
+                                                style="background-color: #1F3250"></span>
+                                        </label>
+                                        <label class="product-card__variant-color">
+                                            <input type="radio" name="color" value="#CF6DB2"
+                                                class="product-card__variant-color-input">
+                                            <span class="product-card__variant-color-content"
+                                                style="background-color: #CF6DB2"></span>
+                                        </label>
+                                        <label class="product-card__variant-color">
+                                            <input type="radio" name="color" value="#96E6EE"
+                                                class="product-card__variant-color-input">
+                                            <span class="product-card__variant-color-content"
+                                                style="background-color: #96E6EE"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="product-card__variant">
+                                    <div class="product-card__variant-title">
+                                        Размеры
+                                    </div>
+                                    <div class="product-card__variant-sizes">
+                                        <label class="product-card__variant-size">
+                                            <input type="radio" name="size" value="40"
+                                                class="product-card__variant-size-input" checked>
+                                            <span class="product-card__variant-size-content">40</span>
+                                        </label>
+                                        <label class="product-card__variant-size">
+                                            <input type="radio" name="size" value="42"
+                                                class="product-card__variant-size-input">
+                                            <span class="product-card__variant-size-content">42</span>
+                                        </label>
+                                        <label class="product-card__variant-size">
+                                            <input type="radio" name="size" value="44"
+                                                class="product-card__variant-size-input">
+                                            <span class="product-card__variant-size-content">44</span>
+                                        </label>
+                                        <label class="product-card__variant-size">
+                                            <input type="radio" name="size" value="46"
+                                                class="product-card__variant-size-input">
+                                            <span class="product-card__variant-size-content">46</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="submit" class="product-card__add-to-cart">
+                            <svg width="14" height="14" aria-hidden="true">
+                                <use xlink:href="#add-to-cart"></use>
+                            </svg>
+                        </button>
+                    </form>
+                </div>
+            </li>
+
+            <li class="search__list-item">
+                <div class="product-card">
+                    <div class="product-card__top">
+                        <a href="#" class="product-card__wrapper">
+                            <div class="product-card__slider">
+                                <div class="swiper">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <div class="product-card__image-card">
+                                                <img src="/images/popular/2.webp" alt="" class="product-card__image">
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="product-card__image-card">
+                                                <img src="/images/popular/1.webp" alt="" class="product-card__image">
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="product-card__image-card">
+                                                <img src="/images/popular/2.webp" alt="" class="product-card__image">
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="product-card__image-card">
+                                                <img src="/images/popular/1.webp" alt="" class="product-card__image">
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="product-card__image-card">
+                                                <img src="/images/popular/2.webp" alt="" class="product-card__image">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="product-card__slider-pagination">
+
+                                </div>
+                            </div>
+                        </a>
+                        <div class="product-card__top-inner-content">
+                            <div class="product-card__tags">
+                                <div class="product-card__tag" style="--tag-color: #F3734C">
+                                    ХИТ
+                                </div>
+                            </div>
+
+                            <a href="#" class="product-card__like-btn">
+                                <svg width="14" height="14" aria-hidden="true">
+                                    <use xlink:href="#like"></use>
+                                </svg>
+                            </a>
+                            <a href="#product-modal" class="product-card__view-btn js-open-modal">
+                                Быстрый просмотр
+                            </a>
+
+                        </div>
+                    </div>
+                    <a href="#" class="product-card__title">
+                        Юбка Gardeur
+                    </a>
+                    <form method="POST" class="product-card__row">
+                        <div class="product-card__left">
+                            <div class="product-card__price-wrapper">
+                                <div class="product-card__price">
+                                    11 690 ₽
+                                </div>
+                            </div>
+                            <div class="product-card__variants">
+                                <div class="product-card__variant">
+                                    <div class="product-card__variant-title">
+                                        Цвета
+                                    </div>
+                                    <div class="product-card__variant-colors">
+                                        <label class="product-card__variant-color">
+                                            <input type="radio" name="color" value="#1F3250"
+                                                class="product-card__variant-color-input" checked>
+                                            <span class="product-card__variant-color-content"
+                                                style="background-color: #1F3250"></span>
+                                        </label>
+                                        <label class="product-card__variant-color">
+                                            <input type="radio" name="color" value="#CF6DB2"
+                                                class="product-card__variant-color-input">
+                                            <span class="product-card__variant-color-content"
+                                                style="background-color: #CF6DB2"></span>
+                                        </label>
+                                        <label class="product-card__variant-color">
+                                            <input type="radio" name="color" value="#96E6EE"
+                                                class="product-card__variant-color-input">
+                                            <span class="product-card__variant-color-content"
+                                                style="background-color: #96E6EE"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="product-card__variant">
+                                    <div class="product-card__variant-title">
+                                        Размеры
+                                    </div>
+                                    <div class="product-card__variant-sizes">
+                                        <label class="product-card__variant-size">
+                                            <input type="radio" name="size" value="40"
+                                                class="product-card__variant-size-input" checked>
+                                            <span class="product-card__variant-size-content">40</span>
+                                        </label>
+                                        <label class="product-card__variant-size">
+                                            <input type="radio" name="size" value="42"
+                                                class="product-card__variant-size-input">
+                                            <span class="product-card__variant-size-content">42</span>
+                                        </label>
+                                        <label class="product-card__variant-size">
+                                            <input type="radio" name="size" value="44"
+                                                class="product-card__variant-size-input">
+                                            <span class="product-card__variant-size-content">44</span>
+                                        </label>
+                                        <label class="product-card__variant-size">
+                                            <input type="radio" name="size" value="46"
+                                                class="product-card__variant-size-input">
+                                            <span class="product-card__variant-size-content">46</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="submit" class="product-card__add-to-cart">
+                            <svg width="14" height="14" aria-hidden="true">
+                                <use xlink:href="#add-to-cart"></use>
+                            </svg>
+                        </button>
+                    </form>
+                </div>
+            </li>
+            <li class="search__list-item">
+                <div class="product-card">
+                    <div class="product-card__top">
+                        <a href="#" class="product-card__wrapper">
+                            <div class="product-card__slider">
+                                <div class="swiper">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <div class="product-card__image-card">
+                                                <img src="/images/popular/5.webp" alt="" class="product-card__image">
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="product-card__image-card">
+                                                <img src="/images/popular/4.webp" alt="" class="product-card__image">
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="product-card__image-card">
+                                                <img src="/images/popular/5.webp" alt="" class="product-card__image">
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="product-card__image-card">
+                                                <img src="/images/popular/4.webp" alt="" class="product-card__image">
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="product-card__image-card">
+                                                <img src="/images/popular/5.webp" alt="" class="product-card__image">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="product-card__slider-pagination">
+
+                                </div>
+                            </div>
+                        </a>
+                        <div class="product-card__top-inner-content">
+                            <div class="product-card__tags">
+                                <div class="product-card__tag" style="--tag-color: #F3734C">
+                                    ХИТ
+                                </div>
+                            </div>
+
+                            <a href="#" class="product-card__like-btn">
+                                <svg width="14" height="14" aria-hidden="true">
+                                    <use xlink:href="#like"></use>
+                                </svg>
+                            </a>
+                            <a href="#product-modal" class="product-card__view-btn js-open-modal">
+                                Быстрый просмотр
+                            </a>
+
+                        </div>
+                    </div>
+                    <a href="#" class="product-card__title">
+                        Блузка Rabe
+                    </a>
+                    <form method="POST" class="product-card__row">
+                        <div class="product-card__left">
+                            <div class="product-card__price-wrapper">
+                                <div class="product-card__price">
+                                    11 690 ₽
+                                </div>
+                            </div>
+                            <div class="product-card__variants">
+                                <div class="product-card__variant">
+                                    <div class="product-card__variant-title">
+                                        Цвета
+                                    </div>
+                                    <div class="product-card__variant-colors">
+                                        <label class="product-card__variant-color">
+                                            <input type="radio" name="color" value="#1F3250"
+                                                class="product-card__variant-color-input" checked>
+                                            <span class="product-card__variant-color-content"
+                                                style="background-color: #1F3250"></span>
+                                        </label>
+                                        <label class="product-card__variant-color">
+                                            <input type="radio" name="color" value="#CF6DB2"
+                                                class="product-card__variant-color-input">
+                                            <span class="product-card__variant-color-content"
+                                                style="background-color: #CF6DB2"></span>
+                                        </label>
+                                        <label class="product-card__variant-color">
+                                            <input type="radio" name="color" value="#96E6EE"
+                                                class="product-card__variant-color-input">
+                                            <span class="product-card__variant-color-content"
+                                                style="background-color: #96E6EE"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="product-card__variant">
+                                    <div class="product-card__variant-title">
+                                        Размеры
+                                    </div>
+                                    <div class="product-card__variant-sizes">
+                                        <label class="product-card__variant-size">
+                                            <input type="radio" name="size" value="40"
+                                                class="product-card__variant-size-input" checked>
+                                            <span class="product-card__variant-size-content">40</span>
+                                        </label>
+                                        <label class="product-card__variant-size">
+                                            <input type="radio" name="size" value="42"
+                                                class="product-card__variant-size-input">
+                                            <span class="product-card__variant-size-content">42</span>
+                                        </label>
+                                        <label class="product-card__variant-size">
+                                            <input type="radio" name="size" value="44"
+                                                class="product-card__variant-size-input">
+                                            <span class="product-card__variant-size-content">44</span>
+                                        </label>
+                                        <label class="product-card__variant-size">
+                                            <input type="radio" name="size" value="46"
+                                                class="product-card__variant-size-input">
+                                            <span class="product-card__variant-size-content">46</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="submit" class="product-card__add-to-cart">
+                            <svg width="14" height="14" aria-hidden="true">
+                                <use xlink:href="#add-to-cart"></use>
+                            </svg>
+                        </button>
+                    </form>
+                </div>
+            </li>
+            <li class="search__list-item">
+                <div class="product-card">
+                    <div class="product-card__top">
+                        <a href="#" class="product-card__wrapper">
+                            <div class="product-card__slider">
+                                <div class="swiper">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <div class="product-card__image-card">
+                                                <img src="/images/new/1.webp" alt="" class="product-card__image">
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="product-card__image-card">
+                                                <img src="/images/new/2.webp" alt="" class="product-card__image">
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="product-card__image-card">
+                                                <img src="/images/new/1.webp" alt="" class="product-card__image">
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="product-card__image-card">
+                                                <img src="/images/new/2.webp" alt="" class="product-card__image">
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="product-card__image-card">
+                                                <img src="/images/new/1.webp" alt="" class="product-card__image">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="product-card__slider-pagination">
+
+                                </div>
+                            </div>
+                        </a>
+                        <div class="product-card__top-inner-content">
+                            <div class="product-card__tags">
+                                <div class="product-card__tag" style="--tag-color: #9ACD3A">
+                                    NEW
+                                </div>
+                                <div class="product-card__tag" style="--tag-color: #F3734C">
+                                    ХИТ
+                                </div>
+                            </div>
+
+                            <a href="#" class="product-card__like-btn">
+                                <svg width="14" height="14" aria-hidden="true">
+                                    <use xlink:href="#like"></use>
+                                </svg>
+                            </a>
+                            <a href="#product-modal" class="product-card__view-btn js-open-modal">
+                                Быстрый просмотр
+                            </a>
+
+                        </div>
+                    </div>
+                    <a href="#" class="product-card__title">
+                        Футболка LEBEK
+                    </a>
+                    <form method="POST" class="product-card__row">
+                        <div class="product-card__left">
+                            <div class="product-card__price-wrapper">
+                                <div class="product-card__price">
+                                    11 690 ₽
+                                </div>
+
+                            </div>
+                            <div class="product-card__variants">
+                                <div class="product-card__variant">
+                                    <div class="product-card__variant-title">
+                                        Цвета
+                                    </div>
+                                    <div class="product-card__variant-colors">
+                                        <label class="product-card__variant-color">
+                                            <input type="radio" name="color" value="#1F3250"
+                                                class="product-card__variant-color-input" checked>
+                                            <span class="product-card__variant-color-content"
+                                                style="background-color: #1F3250"></span>
+                                        </label>
+                                        <label class="product-card__variant-color">
+                                            <input type="radio" name="color" value="#CF6DB2"
+                                                class="product-card__variant-color-input">
+                                            <span class="product-card__variant-color-content"
+                                                style="background-color: #CF6DB2"></span>
+                                        </label>
+                                        <label class="product-card__variant-color">
+                                            <input type="radio" name="color" value="#96E6EE"
+                                                class="product-card__variant-color-input">
+                                            <span class="product-card__variant-color-content"
+                                                style="background-color: #96E6EE"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="product-card__variant">
+                                    <div class="product-card__variant-title">
+                                        Размеры
+                                    </div>
+                                    <div class="product-card__variant-sizes">
+                                        <label class="product-card__variant-size">
+                                            <input type="radio" name="size" value="40"
+                                                class="product-card__variant-size-input" checked>
+                                            <span class="product-card__variant-size-content">40</span>
+                                        </label>
+                                        <label class="product-card__variant-size">
+                                            <input type="radio" name="size" value="42"
+                                                class="product-card__variant-size-input">
+                                            <span class="product-card__variant-size-content">42</span>
+                                        </label>
+                                        <label class="product-card__variant-size">
+                                            <input type="radio" name="size" value="44"
+                                                class="product-card__variant-size-input">
+                                            <span class="product-card__variant-size-content">44</span>
+                                        </label>
+                                        <label class="product-card__variant-size">
+                                            <input type="radio" name="size" value="46"
+                                                class="product-card__variant-size-input">
+                                            <span class="product-card__variant-size-content">46</span>
+                                        </label>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <button type="submit" class="product-card__add-to-cart">
+                            <svg width="14" height="14" aria-hidden="true">
+                                <use xlink:href="#add-to-cart"></use>
+                            </svg>
+                        </button>
+                    </form>
+                </div>
+            </li>
+            <li class="search__list-item">
+                <div class="product-card">
+                    <div class="product-card__top">
+                        <a href="#" class="product-card__wrapper">
+                            <div class="product-card__slider">
+                                <div class="swiper">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <div class="product-card__image-card">
+                                                <img src="/images/popular/4.webp" alt="" class="product-card__image">
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="product-card__image-card">
+                                                <img src="/images/popular/3.webp" alt="" class="product-card__image">
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="product-card__image-card">
+                                                <img src="/images/popular/4.webp" alt="" class="product-card__image">
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="product-card__image-card">
+                                                <img src="/images/popular/3.webp" alt="" class="product-card__image">
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="product-card__image-card">
+                                                <img src="/images/popular/4.webp" alt="" class="product-card__image">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="product-card__slider-pagination">
+
+                                </div>
+                            </div>
+                        </a>
+                        <div class="product-card__top-inner-content">
+                            <div class="product-card__tags">
+                                <div class="product-card__tag" style="--tag-color: #9ACD3A">
+                                    NEW
+                                </div>
+                            </div>
+
+                            <a href="#" class="product-card__like-btn">
+                                <svg width="14" height="14" aria-hidden="true">
+                                    <use xlink:href="#like"></use>
+                                </svg>
+                            </a>
+                            <a href="#product-modal" class="product-card__view-btn js-open-modal">
+                                Быстрый просмотр
+                            </a>
+
+                        </div>
+                    </div>
+                    <a href="#" class="product-card__title">
+                        Кардиган Rabe
+                    </a>
+                    <form method="POST" class="product-card__row">
+                        <div class="product-card__left">
+                            <div class="product-card__price-wrapper">
+                                <div class="product-card__price">
+                                    11 690 ₽
+                                </div>
+                            </div>
+                            <div class="product-card__variants">
+                                <div class="product-card__variant">
+                                    <div class="product-card__variant-title">
+                                        Цвета
+                                    </div>
+                                    <div class="product-card__variant-colors">
+                                        <label class="product-card__variant-color">
+                                            <input type="radio" name="color" value="#1F3250"
+                                                class="product-card__variant-color-input" checked>
+                                            <span class="product-card__variant-color-content"
+                                                style="background-color: #1F3250"></span>
+                                        </label>
+                                        <label class="product-card__variant-color">
+                                            <input type="radio" name="color" value="#CF6DB2"
+                                                class="product-card__variant-color-input">
+                                            <span class="product-card__variant-color-content"
+                                                style="background-color: #CF6DB2"></span>
+                                        </label>
+                                        <label class="product-card__variant-color">
+                                            <input type="radio" name="color" value="#96E6EE"
+                                                class="product-card__variant-color-input">
+                                            <span class="product-card__variant-color-content"
+                                                style="background-color: #96E6EE"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="product-card__variant">
+                                    <div class="product-card__variant-title">
+                                        Размеры
+                                    </div>
+                                    <div class="product-card__variant-sizes">
+                                        <label class="product-card__variant-size">
+                                            <input type="radio" name="size" value="40"
+                                                class="product-card__variant-size-input" checked>
+                                            <span class="product-card__variant-size-content">40</span>
+                                        </label>
+                                        <label class="product-card__variant-size">
+                                            <input type="radio" name="size" value="42"
+                                                class="product-card__variant-size-input">
+                                            <span class="product-card__variant-size-content">42</span>
+                                        </label>
+                                        <label class="product-card__variant-size">
+                                            <input type="radio" name="size" value="44"
+                                                class="product-card__variant-size-input">
+                                            <span class="product-card__variant-size-content">44</span>
+                                        </label>
+                                        <label class="product-card__variant-size">
+                                            <input type="radio" name="size" value="46"
+                                                class="product-card__variant-size-input">
+                                            <span class="product-card__variant-size-content">46</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="submit" class="product-card__add-to-cart">
+                            <svg width="14" height="14" aria-hidden="true">
+                                <use xlink:href="#add-to-cart"></use>
+                            </svg>
+                        </button>
+                    </form>
+                </div>
+            </li>
+            <li class="search__list-item">
+                <div class="product-card">
+                    <div class="product-card__top">
+                        <a href="#" class="product-card__wrapper">
+                            <div class="product-card__slider">
+                                <div class="swiper">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <div class="product-card__image-card">
+                                                <img src="/images/popular/5.webp" alt="" class="product-card__image">
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="product-card__image-card">
+                                                <img src="/images/popular/4.webp" alt="" class="product-card__image">
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="product-card__image-card">
+                                                <img src="/images/popular/5.webp" alt="" class="product-card__image">
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="product-card__image-card">
+                                                <img src="/images/popular/4.webp" alt="" class="product-card__image">
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="product-card__image-card">
+                                                <img src="/images/popular/5.webp" alt="" class="product-card__image">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="product-card__slider-pagination">
+
+                                </div>
+                            </div>
+                        </a>
+                        <div class="product-card__top-inner-content">
+                            <div class="product-card__tags">
+                                <div class="product-card__tag" style="--tag-color: #F3734C">
+                                    ХИТ
+                                </div>
+                            </div>
+
+                            <a href="#" class="product-card__like-btn">
+                                <svg width="14" height="14" aria-hidden="true">
+                                    <use xlink:href="#like"></use>
+                                </svg>
+                            </a>
+                            <a href="#product-modal" class="product-card__view-btn js-open-modal">
+                                Быстрый просмотр
+                            </a>
+
+                        </div>
+                    </div>
+                    <a href="#" class="product-card__title">
+                        Блузка Rabe
+                    </a>
+                    <form method="POST" class="product-card__row">
+                        <div class="product-card__left">
+                            <div class="product-card__price-wrapper">
+                                <div class="product-card__price">
+                                    11 690 ₽
+                                </div>
+                            </div>
+                            <div class="product-card__variants">
+                                <div class="product-card__variant">
+                                    <div class="product-card__variant-title">
+                                        Цвета
+                                    </div>
+                                    <div class="product-card__variant-colors">
+                                        <label class="product-card__variant-color">
+                                            <input type="radio" name="color" value="#1F3250"
+                                                class="product-card__variant-color-input" checked>
+                                            <span class="product-card__variant-color-content"
+                                                style="background-color: #1F3250"></span>
+                                        </label>
+                                        <label class="product-card__variant-color">
+                                            <input type="radio" name="color" value="#CF6DB2"
+                                                class="product-card__variant-color-input">
+                                            <span class="product-card__variant-color-content"
+                                                style="background-color: #CF6DB2"></span>
+                                        </label>
+                                        <label class="product-card__variant-color">
+                                            <input type="radio" name="color" value="#96E6EE"
+                                                class="product-card__variant-color-input">
+                                            <span class="product-card__variant-color-content"
+                                                style="background-color: #96E6EE"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="product-card__variant">
+                                    <div class="product-card__variant-title">
+                                        Размеры
+                                    </div>
+                                    <div class="product-card__variant-sizes">
+                                        <label class="product-card__variant-size">
+                                            <input type="radio" name="size" value="40"
+                                                class="product-card__variant-size-input" checked>
+                                            <span class="product-card__variant-size-content">40</span>
+                                        </label>
+                                        <label class="product-card__variant-size">
+                                            <input type="radio" name="size" value="42"
+                                                class="product-card__variant-size-input">
+                                            <span class="product-card__variant-size-content">42</span>
+                                        </label>
+                                        <label class="product-card__variant-size">
+                                            <input type="radio" name="size" value="44"
+                                                class="product-card__variant-size-input">
+                                            <span class="product-card__variant-size-content">44</span>
+                                        </label>
+                                        <label class="product-card__variant-size">
+                                            <input type="radio" name="size" value="46"
+                                                class="product-card__variant-size-input">
+                                            <span class="product-card__variant-size-content">46</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="submit" class="product-card__add-to-cart">
+                            <svg width="14" height="14" aria-hidden="true">
+                                <use xlink:href="#add-to-cart"></use>
+                            </svg>
+                        </button>
+                    </form>
+                </div>
+            </li>
+            <li class="search__list-item">
+                <div class="product-card">
+                    <div class="product-card__top">
+                        <a href="#" class="product-card__wrapper">
+                            <div class="product-card__slider">
+                                <div class="swiper">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <div class="product-card__image-card">
+                                                <img src="/images/new/1.webp" alt="" class="product-card__image">
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="product-card__image-card">
+                                                <img src="/images/new/2.webp" alt="" class="product-card__image">
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="product-card__image-card">
+                                                <img src="/images/new/1.webp" alt="" class="product-card__image">
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="product-card__image-card">
+                                                <img src="/images/new/2.webp" alt="" class="product-card__image">
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="product-card__image-card">
+                                                <img src="/images/new/1.webp" alt="" class="product-card__image">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="product-card__slider-pagination">
+
+                                </div>
+                            </div>
+                        </a>
+                        <div class="product-card__top-inner-content">
+                            <div class="product-card__tags">
+                                <div class="product-card__tag" style="--tag-color: #9ACD3A">
+                                    NEW
+                                </div>
+                                <div class="product-card__tag" style="--tag-color: #F3734C">
+                                    ХИТ
+                                </div>
+                            </div>
+
+                            <a href="#" class="product-card__like-btn">
+                                <svg width="14" height="14" aria-hidden="true">
+                                    <use xlink:href="#like"></use>
+                                </svg>
+                            </a>
+                            <a href="#product-modal" class="product-card__view-btn js-open-modal">
+                                Быстрый просмотр
+                            </a>
+
+                        </div>
+                    </div>
+                    <a href="#" class="product-card__title">
+                        Футболка LEBEK
+                    </a>
+                    <form method="POST" class="product-card__row">
+                        <div class="product-card__left">
+                            <div class="product-card__price-wrapper">
+                                <div class="product-card__price">
+                                    11 690 ₽
+                                </div>
+
+                            </div>
+                            <div class="product-card__variants">
+                                <div class="product-card__variant">
+                                    <div class="product-card__variant-title">
+                                        Цвета
+                                    </div>
+                                    <div class="product-card__variant-colors">
+                                        <label class="product-card__variant-color">
+                                            <input type="radio" name="color" value="#1F3250"
+                                                class="product-card__variant-color-input" checked>
+                                            <span class="product-card__variant-color-content"
+                                                style="background-color: #1F3250"></span>
+                                        </label>
+                                        <label class="product-card__variant-color">
+                                            <input type="radio" name="color" value="#CF6DB2"
+                                                class="product-card__variant-color-input">
+                                            <span class="product-card__variant-color-content"
+                                                style="background-color: #CF6DB2"></span>
+                                        </label>
+                                        <label class="product-card__variant-color">
+                                            <input type="radio" name="color" value="#96E6EE"
+                                                class="product-card__variant-color-input">
+                                            <span class="product-card__variant-color-content"
+                                                style="background-color: #96E6EE"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="product-card__variant">
+                                    <div class="product-card__variant-title">
+                                        Размеры
+                                    </div>
+                                    <div class="product-card__variant-sizes">
+                                        <label class="product-card__variant-size">
+                                            <input type="radio" name="size" value="40"
+                                                class="product-card__variant-size-input" checked>
+                                            <span class="product-card__variant-size-content">40</span>
+                                        </label>
+                                        <label class="product-card__variant-size">
+                                            <input type="radio" name="size" value="42"
+                                                class="product-card__variant-size-input">
+                                            <span class="product-card__variant-size-content">42</span>
+                                        </label>
+                                        <label class="product-card__variant-size">
+                                            <input type="radio" name="size" value="44"
+                                                class="product-card__variant-size-input">
+                                            <span class="product-card__variant-size-content">44</span>
+                                        </label>
+                                        <label class="product-card__variant-size">
+                                            <input type="radio" name="size" value="46"
+                                                class="product-card__variant-size-input">
+                                            <span class="product-card__variant-size-content">46</span>
+                                        </label>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <button type="submit" class="product-card__add-to-cart">
+                            <svg width="14" height="14" aria-hidden="true">
+                                <use xlink:href="#add-to-cart"></use>
+                            </svg>
+                        </button>
+                    </form>
+                </div>
+            </li>
+        </ul>
+
+    </div>
+</section>

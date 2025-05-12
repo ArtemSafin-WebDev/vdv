@@ -1,0 +1,450 @@
+<div class="filters" method="GET">
+    <a href="#filters-modal" class="filters__open-btn js-open-modal" type="button">
+        <svg width="14" height="14" aria-hidden="true">
+            <use xlink:href="#filters-icon"></use>
+        </svg>
+        <span class="filters__open-btn-text">
+            Фильтр <span>4</span>
+        </span>
+    </a>
+    <div class="filters__modal js-modal" id="filters-modal">
+        <div class="filters__modal-inner">
+            <div class="filters__top-row">
+                <h3 class="filters__heading">
+                    Фильтр
+                </h3>
+                <button class="filters__close js-close-modal" type="button">
+                    <svg width="14" height="14" aria-hidden="true">
+                        <use xlink:href="#close"></use>
+                    </svg>
+                </button>
+            </div>
+            <div class="filters__left-selects">
+                <div class="filters__select js-brands-select">
+                    <div class="filters__select-wrapper">
+                        <button class="filters__select-btn" type="button">
+                            <span class="filters__select-btn-text">
+                                Бренд
+                            </span>
+                            <svg width="14" height="14" aria-hidden="true">
+                                <use xlink:href="#accordion-arrow"></use>
+                            </svg>
+                        </button>
+                        <div class="filters__select-dropdown">
+                            <div class="filters__select-dropdown-inner">
+                                <div class="filters__select-content">
+                                    <ul class="filters__select-list">
+                                        <li class="filters__select-list-item">
+                                            <label class="filters__select-radio">
+                                                <input type="checkbox" name="brand[]" value="Pepe Jeans"
+                                                    class="filters__select-radio-input" checked="">
+                                                <span class="filters__select-radio-mark">
+                                                    <svg width="14" height="14" aria-hidden="true">
+                                                        <use xlink:href="#checkbox"></use>
+                                                    </svg>
+                                                </span>
+                                                <span class="filters__select-radio-text">
+                                                    Pepe Jeans
+                                                </span>
+                                            </label>
+                                        </li>
+                                        <li class="filters__select-list-item">
+                                            <label class="filters__select-radio">
+                                                <input type="checkbox" name="brand[]" value="Alberto"
+                                                    class="filters__select-radio-input">
+                                                <span class="filters__select-radio-mark">
+                                                    <svg width="14" height="14" aria-hidden="true">
+                                                        <use xlink:href="#checkbox"></use>
+                                                    </svg>
+                                                </span>
+                                                <span class="filters__select-radio-text">
+                                                    Alberto
+                                                </span>
+                                            </label>
+                                        </li>
+                                        <li class="filters__select-list-item">
+                                            <label class="filters__select-radio">
+                                                <input type="checkbox" name="brand[]" value="Angels"
+                                                    class="filters__select-radio-input">
+                                                <span class="filters__select-radio-mark">
+                                                    <svg width="14" height="14" aria-hidden="true">
+                                                        <use xlink:href="#checkbox"></use>
+                                                    </svg>
+                                                </span>
+                                                <span class="filters__select-radio-text">
+                                                    Angels
+                                                </span>
+                                            </label>
+                                        </li>
+                                        <li class="filters__select-list-item">
+                                            <label class="filters__select-radio">
+                                                <input type="checkbox" name="brand[]" value="Ara"
+                                                    class="filters__select-radio-input">
+                                                <span class="filters__select-radio-mark">
+                                                    <svg width="14" height="14" aria-hidden="true">
+                                                        <use xlink:href="#checkbox"></use>
+                                                    </svg>
+                                                </span>
+                                                <span class="filters__select-radio-text">
+                                                    Ara
+                                                </span>
+                                            </label>
+                                        </li>
+                                        <li class="filters__select-list-item">
+                                            <label class="filters__select-radio">
+                                                <input type="checkbox" name="brand[]" value="Be Natural"
+                                                    class="filters__select-radio-input">
+                                                <span class="filters__select-radio-mark">
+                                                    <svg width="14" height="14" aria-hidden="true">
+                                                        <use xlink:href="#checkbox"></use>
+                                                    </svg>
+                                                </span>
+                                                <span class="filters__select-radio-text">
+                                                    Be Natural
+                                                </span>
+                                            </label>
+                                        </li>
+                                        <li class="filters__select-list-item">
+                                            <label class="filters__select-radio">
+                                                <input type="checkbox" name="brand[]" value="Ben Green"
+                                                    class="filters__select-radio-input">
+                                                <span class="filters__select-radio-mark">
+                                                    <svg width="14" height="14" aria-hidden="true">
+                                                        <use xlink:href="#checkbox"></use>
+                                                    </svg>
+                                                </span>
+                                                <span class="filters__select-radio-text">
+                                                    Ben Green
+                                                </span>
+                                            </label>
+                                        </li>
+                                        <li class="filters__select-list-item">
+                                            <label class="filters__select-radio">
+                                                <input type="checkbox" name="brand[]" value="Benvenuto"
+                                                    class="filters__select-radio-input">
+                                                <span class="filters__select-radio-mark">
+                                                    <svg width="14" height="14" aria-hidden="true">
+                                                        <use xlink:href="#checkbox"></use>
+                                                    </svg>
+                                                </span>
+                                                <span class="filters__select-radio-text">
+                                                    Benvenuto
+                                                </span>
+                                            </label>
+                                        </li>
+                                        <li class="filters__select-list-item">
+                                            <label class="filters__select-radio">
+                                                <input type="checkbox" name="brand[]" value="Blonde No.8"
+                                                    class="filters__select-radio-input">
+                                                <span class="filters__select-radio-mark">
+                                                    <svg width="14" height="14" aria-hidden="true">
+                                                        <use xlink:href="#checkbox"></use>
+                                                    </svg>
+                                                </span>
+                                                <span class="filters__select-radio-text">
+                                                    Blonde No.8
+                                                </span>
+                                            </label>
+                                        </li>
+                                        <li class="filters__select-list-item">
+                                            <label class="filters__select-radio">
+                                                <input type="checkbox" name="brand[]" value="Brax"
+                                                    class="filters__select-radio-input">
+                                                <span class="filters__select-radio-mark">
+                                                    <svg width="14" height="14" aria-hidden="true">
+                                                        <use xlink:href="#checkbox"></use>
+                                                    </svg>
+                                                </span>
+                                                <span class="filters__select-radio-text">
+                                                    Brax
+                                                </span>
+                                            </label>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="filters__select js-colors-select">
+                    <div class="filters__select-wrapper">
+                        <button class="filters__select-btn" type="button">
+                            <span class="filters__select-btn-text">
+                                Цвет
+                            </span>
+                            <svg width="14" height="14" aria-hidden="true">
+                                <use xlink:href="#accordion-arrow"></use>
+                            </svg>
+                        </button>
+                        <div class="filters__select-dropdown">
+                            <div class="filters__select-dropdown-inner">
+                                <div class="filters__select-content">
+                                    <ul class="filters__select-list">
+                                        <li class="filters__select-list-item">
+                                            <label class="filters__select-radio">
+                                                <input type="checkbox" name="color[]" value="Синий"
+                                                    class="filters__select-radio-input">
+                                                <span class="filters__select-radio-mark">
+                                                    <svg width="14" height="14" aria-hidden="true">
+                                                        <use xlink:href="#checkbox"></use>
+                                                    </svg>
+                                                </span>
+                                                <span class="filters__select-radio-text">
+                                                    <span class="filters__select-radio-colorbox"
+                                                        style="background-color: #1F3250;">
+
+                                                    </span>
+                                                    Синий
+                                                </span>
+                                            </label>
+                                        </li>
+                                        <li class="filters__select-list-item">
+                                            <label class="filters__select-radio">
+                                                <input type="checkbox" name="color[]" value="Розовый"
+                                                    class="filters__select-radio-input">
+                                                <span class="filters__select-radio-mark">
+                                                    <svg width="14" height="14" aria-hidden="true">
+                                                        <use xlink:href="#checkbox"></use>
+                                                    </svg>
+                                                </span>
+                                                <span class="filters__select-radio-text">
+                                                    <span class="filters__select-radio-colorbox"
+                                                        style="background-color: #CF6DB2;">
+
+                                                    </span>
+                                                    Розовый
+                                                </span>
+                                            </label>
+                                        </li>
+                                        <li class="filters__select-list-item">
+                                            <label class="filters__select-radio">
+                                                <input type="checkbox" name="color[]" value="Бирюзовый"
+                                                    class="filters__select-radio-input">
+                                                <span class="filters__select-radio-mark">
+                                                    <svg width="14" height="14" aria-hidden="true">
+                                                        <use xlink:href="#checkbox"></use>
+                                                    </svg>
+                                                </span>
+                                                <span class="filters__select-radio-text">
+                                                    <span class="filters__select-radio-colorbox"
+                                                        style="background-color: #96E6EE;">
+
+                                                    </span>
+                                                    Бирюзовый
+                                                </span>
+                                            </label>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="filters__select">
+                    <div class="filters__select-wrapper">
+                        <button class="filters__select-btn" type="button">
+                            <span class="filters__select-btn-text">
+                                Размер
+                            </span>
+                            <svg width="14" height="14" aria-hidden="true">
+                                <use xlink:href="#accordion-arrow"></use>
+                            </svg>
+                        </button>
+                        <div class="filters__select-dropdown">
+                            <div class="filters__select-dropdown-inner">
+                                <div class="filters__select-content">
+                                    <ul class="filters__select-list">
+                                        <li class="filters__select-list-item">
+                                            <label class="filters__select-radio">
+                                                <input type="checkbox" name="size[]" value="38"
+                                                    class="filters__select-radio-input">
+                                                <span class="filters__select-radio-mark">
+                                                    <svg width="14" height="14" aria-hidden="true">
+                                                        <use xlink:href="#checkbox"></use>
+                                                    </svg>
+                                                </span>
+                                                <span class="filters__select-radio-text">
+                                                    38
+                                                </span>
+                                            </label>
+                                        </li>
+                                        <li class="filters__select-list-item">
+                                            <label class="filters__select-radio">
+                                                <input type="checkbox" name="size[]" value="39"
+                                                    class="filters__select-radio-input">
+                                                <span class="filters__select-radio-mark">
+                                                    <svg width="14" height="14" aria-hidden="true">
+                                                        <use xlink:href="#checkbox"></use>
+                                                    </svg>
+                                                </span>
+                                                <span class="filters__select-radio-text">
+                                                    39
+                                                </span>
+                                            </label>
+                                        </li>
+                                        <li class="filters__select-list-item">
+                                            <label class="filters__select-radio">
+                                                <input type="checkbox" name="size[]" value="40"
+                                                    class="filters__select-radio-input">
+                                                <span class="filters__select-radio-mark">
+                                                    <svg width="14" height="14" aria-hidden="true">
+                                                        <use xlink:href="#checkbox"></use>
+                                                    </svg>
+                                                </span>
+                                                <span class="filters__select-radio-text">
+                                                    40
+                                                </span>
+                                            </label>
+                                        </li>
+                                        <li class="filters__select-list-item">
+                                            <label class="filters__select-radio">
+                                                <input type="checkbox" name="size[]" value="41-43"
+                                                    class="filters__select-radio-input">
+                                                <span class="filters__select-radio-mark">
+                                                    <svg width="14" height="14" aria-hidden="true">
+                                                        <use xlink:href="#checkbox"></use>
+                                                    </svg>
+                                                </span>
+                                                <span class="filters__select-radio-text">
+                                                    41-43
+                                                </span>
+                                            </label>
+                                        </li>
+                                        <li class="filters__select-list-item">
+                                            <label class="filters__select-radio">
+                                                <input type="checkbox" name="size[]" value="44"
+                                                    class="filters__select-radio-input">
+                                                <span class="filters__select-radio-mark">
+                                                    <svg width="14" height="14" aria-hidden="true">
+                                                        <use xlink:href="#checkbox"></use>
+                                                    </svg>
+                                                </span>
+                                                <span class="filters__select-radio-text">
+                                                    44
+                                                </span>
+                                            </label>
+                                        </li>
+                                        <li class="filters__select-list-item">
+                                            <label class="filters__select-radio">
+                                                <input type="checkbox" name="size[]" value="45"
+                                                    class="filters__select-radio-input">
+                                                <span class="filters__select-radio-mark">
+                                                    <svg width="14" height="14" aria-hidden="true">
+                                                        <use xlink:href="#checkbox"></use>
+                                                    </svg>
+                                                </span>
+                                                <span class="filters__select-radio-text">
+                                                    45
+                                                </span>
+                                            </label>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="filters__select">
+                    <div class="filters__select-wrapper">
+                        <button class="filters__select-btn" type="button">
+                            <span class="filters__select-btn-text">
+                                Пол
+                            </span>
+                            <svg width="14" height="14" aria-hidden="true">
+                                <use xlink:href="#accordion-arrow"></use>
+                            </svg>
+                        </button>
+                        <div class="filters__select-dropdown">
+                            <div class="filters__select-dropdown-inner">
+                                <div class="filters__select-content">
+                                    <ul class="filters__select-list">
+                                        <li class="filters__select-list-item">
+                                            <label class="filters__select-radio">
+                                                <input type="checkbox" name="gender[]" value="Мужской"
+                                                    class="filters__select-radio-input">
+                                                <span class="filters__select-radio-mark">
+                                                    <svg width="14" height="14" aria-hidden="true">
+                                                        <use xlink:href="#checkbox"></use>
+                                                    </svg>
+                                                </span>
+                                                <span class="filters__select-radio-text">
+                                                    Мужской
+                                                </span>
+                                            </label>
+                                        </li>
+                                        <li class="filters__select-list-item">
+                                            <label class="filters__select-radio">
+                                                <input type="checkbox" name="gender[]" value="Женский"
+                                                    class="filters__select-radio-input">
+                                                <span class="filters__select-radio-mark">
+                                                    <svg width="14" height="14" aria-hidden="true">
+                                                        <use xlink:href="#checkbox"></use>
+                                                    </svg>
+                                                </span>
+                                                <span class="filters__select-radio-text">
+                                                    Женский
+                                                </span>
+                                            </label>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="filters__right-selects">
+        <div class="filters__select js-classic-select">
+            <div class="filters__select-wrapper">
+                <button class="filters__select-btn" type="button">
+                    <span class="filters__select-btn-text">
+                        По цене (убывание)
+                    </span>
+                    <svg width="14" height="14" aria-hidden="true">
+                        <use xlink:href="#accordion-arrow"></use>
+                    </svg>
+                </button>
+                <div class="filters__select-dropdown filters__select-dropdown--right-aligned">
+                    <div class="filters__select-dropdown-inner">
+                        <div class="filters__select-content">
+                            <ul class="filters__select-list">
+                                <li class="filters__select-list-item">
+                                    <label class="filters__select-radio">
+                                        <input type="radio" name="sort" value="По цене (убывание)"
+                                            class="filters__select-radio-input" checked="">
+                                        <span class="filters__select-radio-mark">
+                                            <svg width="14" height="14" aria-hidden="true">
+                                                <use xlink:href="#checkbox"></use>
+                                            </svg>
+                                        </span>
+                                        <span class="filters__select-radio-text">
+                                            По цене (убывание)
+                                        </span>
+                                    </label>
+                                </li>
+                                <li class="filters__select-list-item">
+                                    <label class="filters__select-radio">
+                                        <input type="radio" name="sort" value="По цене (возрастание)"
+                                            class="filters__select-radio-input">
+                                        <span class="filters__select-radio-mark">
+                                            <svg width="14" height="14" aria-hidden="true">
+                                                <use xlink:href="#checkbox"></use>
+                                            </svg>
+                                        </span>
+                                        <span class="filters__select-radio-text">
+                                            По цене (возрастание)
+                                        </span>
+                                    </label>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
