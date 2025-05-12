@@ -314,6 +314,10 @@
 
 .filters__right-selects {
   margin-left: auto;
+  @include media.breakpoint(mobile) {
+    position: relative;
+    z-index: 20;
+  }
 }
 
 .filters__select-brand-tag {
@@ -354,7 +358,6 @@
 .filters__modal {
   display: contents;
   @include media.breakpoint(mobile) {
-    background: white;
     position: fixed;
     left: 0;
     top: 0;
@@ -367,9 +370,7 @@
     display: flex;
     flex-direction: column;
     transition: opacity 0.4s, visibility 0s linear 0.4s;
-    padding: var(--content-padding);
-    padding-top: 3.8rem;
-    padding-bottom: 4rem;
+
     opacity: 0;
     visibility: hidden;
 
@@ -383,6 +384,16 @@
 
 .filters__modal-inner {
   display: contents;
+  @include media.breakpoint(mobile) {
+    background: white;
+    flex-grow: 1;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    padding: var(--content-padding);
+    padding-top: 3.8rem;
+    padding-bottom: 4rem;
+  }
 }
 
 .filters__open-btn {
@@ -409,8 +420,12 @@
 }
 
 .filters__open-btn-text {
-  sup {
-    display: none;
+  span {
     color: var(--primary-color);
+
+    font-size: 0.7em;
+    position: relative;
+    top: -0.4em;
+    left: -0.2em;
   }
 }

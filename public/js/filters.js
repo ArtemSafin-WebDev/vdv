@@ -2,6 +2,28 @@ document.addEventListener("DOMContentLoaded", () => {
   const elements = Array.from(document.querySelectorAll(".filters"));
   elements.forEach((element) => {
     const selects = Array.from(element.querySelectorAll(".filters__select"));
+    const modal = element.querySelector(".filters__modal");
+    const countOutputElement = element.querySelector(
+      ".filters__open-btn-text span"
+    );
+
+    const calculateCheckedCount = () => {
+      const checkedCount = Array.from(
+        modal.querySelectorAll('input[type="checkbox"]')
+      ).filter((input) => input.checked)?.length;
+
+      console.log(
+        "Calculating",
+        checkedCount,
+        Array.from(modal.querySelectorAll('input[type="checkbox"]'))
+      );
+      if (!checkedCount) {
+        countOutputElement.textContent = "";
+      } else {
+        countOutputElement.textContent = checkedCount;
+      }
+    };
+
     selects.forEach((select) => {
       const btn = select.querySelector(".filters__select-btn");
       const wrapper = select.querySelector(".filters__select-wrapper");
@@ -14,15 +36,29 @@ document.addEventListener("DOMContentLoaded", () => {
         select.classList.toggle("open");
       });
 
-      wrapper.addEventListener("mouseenter", () => {
-        select.classList.add("open");
-      });
-      wrapper.addEventListener("mouseleave", () => {
-        select.classList.remove("open");
-      });
+      if (window.matchMedia("(hover: hover) and (pointer: fine)").matches) {
+        wrapper.addEventListener("mouseenter", () => {
+          select.classList.add("open");
+        });
+        wrapper.addEventListener("mouseleave", () => {
+          select.classList.remove("open");
+        });
+      }
 
       document.addEventListener("click", (event) => {
-        if (select.contains(event.target)) return;
+        if (
+          event.target.matches(".filters__select") ||
+          event.target.closest(".filters__select") ||
+          event.target.closest(".filters__open-btn")
+        )
+          return;
+        if (
+          event.target.closest(".filters__modal") &&
+          window.matchMedia("(max-width: 576px)").matches
+        )
+          return;
+
+        console.log("Clicked outside");
         select.classList.remove("open");
       });
 
@@ -81,6 +117,8 @@ document.addEventListener("DOMContentLoaded", () => {
           tags.forEach((tag) => tag.remove());
           tags = newTags;
           select.append(...tags);
+
+          calculateCheckedCount();
         };
         update();
 
