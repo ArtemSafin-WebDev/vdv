@@ -609,3 +609,11 @@
   display: flex;
   flex-direction: column;
 }
+
+.catalog__filters {
+  margin-bottom: 3.5rem;
+
+  @include media.breakpoint(mobile) {
+    margin-bottom: 2.5rem;
+  }
+}
