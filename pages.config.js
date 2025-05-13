@@ -13,6 +13,7 @@ import catalog from "./pages-data/catalog";
 import orders from "./pages-data/orders";
 import checkout from "./pages-data/checkout";
 import search from "./pages-data/search";
+import cart from "./pages-data/cart";
 const pagesConfig = {
   ...home,
   ...news,
@@ -29,6 +30,7 @@ const pagesConfig = {
   ...orders,
   ...checkout,
   ...search,
+  ...cart,
 };
 
 export default pagesConfig;
