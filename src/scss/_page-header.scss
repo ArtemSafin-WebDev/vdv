@@ -387,6 +387,12 @@
     transform: rotate(0deg);
   }
 
+  &--unauthorized {
+    &::after {
+      display: none;
+    }
+  }
+
   @media (hover: hover) and (pointer: fine) {
     &:hover {
       svg {
