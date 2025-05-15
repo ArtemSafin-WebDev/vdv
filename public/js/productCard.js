@@ -52,10 +52,23 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     const likeBtn = card.querySelector(".product-card__like-btn");
     if (likeBtn) {
-      likeBtn.addEventListener("click", (event) => {
+      likeBtn.addEventListener("click", async (event) => {
         event.preventDefault();
-        // Скрипт для добавления в избранное
-        likeBtn.classList.toggle("active");
+        const url = likeBtn.href;
+        try {
+          const response = await fetch(url, {
+            method: "POST",
+          });
+          if (!response.ok) {
+            throw new Error("Something went wrong");
+          }
+          const data = await response.text();
+          console.log("Data", data);
+        } catch (error) {
+          console.log("Error", error);
+        } finally {
+          likeBtn.classList.toggle("active");
+        }
       });
     }
 

@@ -15,6 +15,7 @@ import checkout from "./pages-data/checkout";
 import search from "./pages-data/search";
 import cart from "./pages-data/cart";
 import homeUnauthorized from "./pages-data/homeUnauthorized";
+import fav from "./pages-data/fav";
 const pagesConfig = {
   ...home,
   ...news,
@@ -33,6 +34,7 @@ const pagesConfig = {
   ...search,
   ...cart,
   ...homeUnauthorized,
+  ...fav,
 };
 
 export default pagesConfig;
