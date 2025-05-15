@@ -1,7 +1,12 @@
 document.addEventListener("DOMContentLoaded", () => {
   const elements = Array.from(document.querySelectorAll(".js-product"));
-  elements.forEach((product) => {
+
+  function initProductCard(product) {
+    const controller = new AbortController();
+    const signal = controller.signal;
     const sliders = Array.from(product.querySelectorAll(".product__gallery"));
+
+    let sliderInstances = [];
 
     sliders.forEach((slider) => {
       const thumbsContainer = slider.querySelector(
@@ -64,7 +69,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       thumbsSwiper.init();
 
-      new Swiper(mainContainer, {
+      const mainSwiper = new Swiper(mainContainer, {
         slidesPerView: 1,
         spaceBetween: 0,
         thumbs: {
@@ -72,13 +77,21 @@ document.addEventListener("DOMContentLoaded", () => {
           autoScrollOffset: 1,
         },
       });
+
+      sliderInstances.push([thumbsSwiper, mainSwiper]);
     });
     const likeBtn = product.querySelector(".product__like-btn");
 
-    likeBtn?.addEventListener("click", (e) => {
-      e.preventDefault();
-      likeBtn.classList.toggle("active");
-    });
+    likeBtn?.addEventListener(
+      "click",
+      (e) => {
+        e.preventDefault();
+        likeBtn.classList.toggle("active");
+      },
+      {
+        signal,
+      }
+    );
 
     const tabBtns = Array.from(
       product.querySelectorAll(".product__tabs-nav-btn")
@@ -88,13 +101,19 @@ document.addEventListener("DOMContentLoaded", () => {
     );
 
     tabBtns.forEach((btn, btnIndex) => {
-      btn.addEventListener("click", (e) => {
-        e.preventDefault();
-        tabBtns.forEach((btn) => btn.classList.remove("active"));
-        tabItems.forEach((item) => item.classList.remove("active"));
-        tabBtns[btnIndex]?.classList.add("active");
-        tabItems[btnIndex]?.classList.add("active");
-      });
+      btn.addEventListener(
+        "click",
+        (e) => {
+          e.preventDefault();
+          tabBtns.forEach((btn) => btn.classList.remove("active"));
+          tabItems.forEach((item) => item.classList.remove("active"));
+          tabBtns[btnIndex]?.classList.add("active");
+          tabItems[btnIndex]?.classList.add("active");
+        },
+        {
+          signal,
+        }
+      );
     });
 
     const productForm = product.querySelector(".product__form");
@@ -106,23 +125,63 @@ document.addEventListener("DOMContentLoaded", () => {
     const plus = counter.querySelector(".counter__btn--plus");
     console.log("Add to cart", productForm);
     if (productForm && cartWrapper) {
-      productForm.addEventListener("submit", (event) => {
-        event.preventDefault();
-        productAddToCart.classList.remove("active");
-        cartWrapper.classList.add("active");
-        if (counterInput) counterInput.value = 1;
-        if (minus) minus.disabled = false;
-        if (plus) plus.disabled = false;
-      });
-      if (counter) {
-        counterInput.addEventListener("change", (event) => {
-          const amount = event.target.valueAsNumber;
-          if (amount === 0) {
-            cartWrapper.classList.remove("active");
-            productAddToCart.classList.add("active");
+      productForm.addEventListener(
+        "submit",
+        async (event) => {
+          event.preventDefault();
+          productAddToCart.classList.remove("active");
+          cartWrapper.classList.add("active");
+          if (counterInput) counterInput.value = 1;
+          if (minus) minus.disabled = false;
+          if (plus) plus.disabled = false;
+          const url = productForm.action;
+          try {
+            const response = await fetch(url, {
+              method: "POST",
+              body: new FormData(productForm),
+              signal,
+            });
+            if (!response.ok) {
+              throw new Error("Something went wrong");
+            }
+            const data = await response.text();
+            console.log("Data", data);
+          } catch (error) {
+            console.log("Error", error);
           }
-        });
+        },
+        {
+          signal,
+        }
+      );
+      if (counter) {
+        counterInput.addEventListener(
+          "change",
+          (event) => {
+            const amount = event.target.valueAsNumber;
+            if (amount === 0) {
+              cartWrapper.classList.remove("active");
+              productAddToCart.classList.add("active");
+            }
+          },
+          {
+            signal,
+          }
+        );
       }
     }
+
+    return () => {
+      controller.abort();
+      sliderInstances.forEach(([thumbsSwiper, mainSwiper]) => {
+        thumbsSwiper.destroy(true, true);
+        mainSwiper.destroy(true, true);
+      });
+    };
+  }
+  elements.forEach((product) => {
+    initProductCard(product);
   });
+
+  window.vdvApi.initProductCard = initProductCard;
 });

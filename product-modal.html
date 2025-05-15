@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+    <head>
+        {{> meta }}
+    </head>
+
+    <body>
+        {{> header }}
+        <main class="page-main">
+
+            <div class="modal modal--only-desktop js-modal" id="product-modal">
+                <div class="modal__inner modal__inner--product">
+                    <button class="modal__close js-close-modal">
+                        <svg width="23" height="23" viewBox="0 0 23 23">
+                            <use xlink:href="#modal-close"></use>
+                        </svg>
+                    </button>
+                    <div class="product__row js-product">
+                        <div class="product__left-col">
+                            <div class="product__gallery">
+                                <div class="product__gallery-thumbs">
+                                    <div class="product__gallery-thumbs-wrapper">
+                                        <button class="product__gallery-arrow product__gallery-arrow--up">
+                                            <svg width="23" height="23" viewBox="0 0 23 23">
+                                                <use xlink:href="#slider-arrow-up"></use>
+                                            </svg>
+                                        </button>
+                                        <div class="swiper">
+                                            <div class="swiper-wrapper">
+                                                <div class="swiper-slide">
+                                                    <div class="product__gallery-thumbs-card">
+                                                        <img src="/images/gallery/1.webp" alt=""
+                                                            class="product__gallery-thumbs-card-image">
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="product__gallery-thumbs-card">
+                                                        <img src="/images/gallery/2.webp" alt=""
+                                                            class="product__gallery-thumbs-card-image">
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="product__gallery-thumbs-card">
+                                                        <img src="/images/gallery/1.webp" alt=""
+                                                            class="product__gallery-thumbs-card-image">
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="product__gallery-thumbs-card">
+                                                        <img src="/images/gallery/2.webp" alt=""
+                                                            class="product__gallery-thumbs-card-image">
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="product__gallery-thumbs-card">
+                                                        <img src="/images/gallery/1.webp" alt=""
+                                                            class="product__gallery-thumbs-card-image">
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="product__gallery-thumbs-card">
+                                                        <img src="/images/gallery/2.webp" alt=""
+                                                            class="product__gallery-thumbs-card-image">
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="product__gallery-thumbs-card">
+                                                        <img src="/images/gallery/1.webp" alt=""
+                                                            class="product__gallery-thumbs-card-image">
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="product__gallery-thumbs-card">
+                                                        <img src="/images/gallery/2.webp" alt=""
+                                                            class="product__gallery-thumbs-card-image">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <button class="product__gallery-arrow product__gallery-arrow--down">
+                                            <svg width="23" height="23" viewBox="0 0 23 23">
+                                                <use xlink:href="#slider-arrow-down"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="product__gallery-main">
+                                    <div class="product__tags">
+                                        <div class="product__tag">
+                                            ХИТ
+                                        </div>
+                                    </div>
+                                    <div class="swiper">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <div class="product__gallery-main-card">
+                                                    <img src="/images/gallery/1.webp" alt=""
+                                                        class="product__gallery-main-card-image">
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="product__gallery-main-card">
+                                                    <img src="/images/gallery/2.webp" alt=""
+                                                        class="product__gallery-main-card-image">
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="product__gallery-main-card">
+                                                    <img src="/images/gallery/1.webp" alt=""
+                                                        class="product__gallery-main-card-image">
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="product__gallery-main-card">
+                                                    <img src="/images/gallery/2.webp" alt=""
+                                                        class="product__gallery-main-card-image">
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="product__gallery-main-card">
+                                                    <img src="/images/gallery/1.webp" alt=""
+                                                        class="product__gallery-main-card-image">
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="product__gallery-main-card">
+                                                    <img src="/images/gallery/2.webp" alt=""
+                                                        class="product__gallery-main-card-image">
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="product__gallery-main-card">
+                                                    <img src="/images/gallery/1.webp" alt=""
+                                                        class="product__gallery-main-card-image">
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="product__gallery-main-card">
+                                                    <img src="/images/gallery/2.webp" alt=""
+                                                        class="product__gallery-main-card-image">
+                                                </div>
+                                            </div>
+
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="product__slider-pagination">
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product__right-col">
+                            <div class="product__heading-wrapper">
+
+
+                                <h1 class="product__heading">
+                                    Жакет Oui 85985
+                                </h1>
+
+                            </div>
+                            <div class="product__code">
+                                Артикул: 85985
+                            </div>
+                            <form action="/" class="product__form">
+                                <div class="product__variants">
+                                    <div class="product__variants-item">
+                                        <h3 class="product__variants-item-title">
+                                            Цвет:
+                                        </h3>
+                                        <div class="product__variants-item-colors">
+                                            <div class="product__variants-item-color">
+                                                <label class="product__variants-item-color-item">
+                                                    <input type="radio" name="color"
+                                                        class="product__variants-item-color-input" name="color"
+                                                        value="#1F3250" checked="">
+                                                    <span class="product__variants-item-color-mark"
+                                                        style="--variant-color: #1F3250;">
+
+                                                    </span>
+                                                    <span class="product__variants-item-color-text">
+                                                        Синий
+                                                    </span>
+                                                </label>
+                                            </div>
+                                            <div class="product__variants-item-color">
+                                                <label class="product__variants-item-color-item">
+                                                    <input type="radio" name="color"
+                                                        class="product__variants-item-color-input" name="color"
+                                                        value="#CF6DB2;">
+                                                    <span class="product__variants-item-color-mark"
+                                                        style="--variant-color: #CF6DB2;">
+
+                                                    </span>
+                                                    <span class="product__variants-item-color-text">
+                                                        Розовый
+                                                    </span>
+                                                </label>
+                                            </div>
+                                            <div class="product__variants-item-color">
+                                                <label class="product__variants-item-color-item">
+                                                    <input type="radio" name="color"
+                                                        class="product__variants-item-color-input" value="#96E6EE;">
+                                                    <span class="product__variants-item-color-mark"
+                                                        style="--variant-color: #96E6EE;">
+
+                                                    </span>
+                                                    <span class="product__variants-item-color-text">
+                                                        Бирюзовый
+                                                    </span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="product__variants-item">
+                                        <h3 class="product__variants-item-title">
+                                            Размер:
+                                        </h3>
+                                        <div class="product__variant-sizes-wrapper">
+
+
+                                            <div class="product__variant-sizes">
+                                                <label class="product__variants-sizes-radio">
+                                                    <input type="radio" name="size"
+                                                        class="product__variants-sizes-radio-input" value="40"
+                                                        checked="">
+                                                    <span class="product__variants-sizes-radio-content">
+                                                        40
+                                                    </span>
+                                                </label>
+                                                <label class="product__variants-sizes-radio">
+                                                    <input type="radio" name="size"
+                                                        class="product__variants-sizes-radio-input" value="42">
+                                                    <span class="product__variants-sizes-radio-content">
+                                                        42
+                                                    </span>
+                                                </label>
+                                                <label class="product__variants-sizes-radio">
+                                                    <input type="radio" name="size"
+                                                        class="product__variants-sizes-radio-input" value="44">
+                                                    <span class="product__variants-sizes-radio-content">
+                                                        44
+                                                    </span>
+                                                </label>
+                                                <label class="product__variants-sizes-radio">
+                                                    <input type="radio" name="size"
+                                                        class="product__variants-sizes-radio-input" value="46">
+                                                    <span class="product__variants-sizes-radio-content">
+                                                        46
+                                                    </span>
+                                                </label>
+                                            </div>
+                                            <a href="#" class="product__variants-item-table">
+                                                Таблица размеров
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="product__price-wrapper">
+                                    <div class="product__price">
+                                        11 690 ₽
+                                    </div>
+                                    <div class="product__discount-wrapper">
+                                        <div class="product__old-price">
+                                            13 600 ₽
+                                        </div>
+                                        <div class="product__discount">
+                                            Скидка 10%
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="product__controls">
+                                    <div class="product__add-to-cart active">
+                                        <button class="product__add-to-cart-btn" type="submit">
+                                            <svg width="14" height="14" aria-hidden="true">
+                                                <use xlink:href="#cart"></use>
+                                            </svg>
+                                            Добавить в корзину
+                                        </button>
+                                    </div>
+                                    <div class="product__cart-wrapper">
+                                        <div class="counter" data-min="0">
+                                            <button class="counter__btn counter__btn--minus" type="button">
+                                                <svg width="14" height="14" aria-hidden="true" class="icon-cross">
+                                                    <use xlink:href="#minus"></use>
+                                                </svg>
+                                            </button>
+                                            <div class="counter__amount">
+                                                <input type="number" class="counter__amount-input" readonly=""
+                                                    value="1">
+                                            </div>
+                                            <button class="counter__btn counter__btn--plus" type="button">
+                                                <svg width="14" height="14" aria-hidden="true" class="icon-cross">
+                                                    <use xlink:href="#plus"></use>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                        <a href="#" class="product__go-to-cart">
+                                            В корзине
+                                        </a>
+                                    </div>
+                                    <a href="#" class="product__like-btn" type="button">
+                                        <svg width="14" height="14" aria-hidden="true">
+                                            <use xlink:href="#like"></use>
+                                        </svg>
+                                    </a>
+                                </div>
+                                <div class="product__modal-specs">
+                                    <div class="product__brand-wrapper">
+                                        <img src="/images/brand.webp" alt="" class="product__brand-logo">
+                                        <a href="#" class="product__brand-all-goods">
+                                            Все товары бренда
+                                        </a>
+                                    </div>
+                                    <div class="product__specs">
+                                        <ul class="product__specs-list">
+                                            <li class="product__specs-list-item">
+                                                <div class="product__specs-card">
+                                                    <div class="product__specs-card-key">
+                                                        Бренд:
+                                                    </div>
+                                                    <div class="product__specs-card-value">
+                                                        Oui
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="product__specs-list-item">
+                                                <div class="product__specs-card">
+                                                    <div class="product__specs-card-key">
+                                                        Страна:
+                                                    </div>
+                                                    <div class="product__specs-card-value">
+                                                        Германия
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="product__specs-list-item">
+                                                <div class="product__specs-card">
+                                                    <div class="product__specs-card-key">
+                                                        Материал:
+                                                    </div>
+                                                    <div class="product__specs-card-value">
+                                                        95% полиэстер, 5% эластан
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="product__specs-list-item">
+                                                <div class="product__specs-card">
+                                                    <div class="product__specs-card-key">
+                                                        Сезон:
+                                                    </div>
+                                                    <div class="product__specs-card-value">
+                                                        Осень-Зима 2024
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="product__specs-list-item">
+                                                <div class="product__specs-card">
+                                                    <div class="product__specs-card-key">
+                                                        Производетль:
+                                                    </div>
+                                                    <div class="product__specs-card-value">
+                                                        OUI Gruppe GmbH & Co.KG
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        {{> footer }}
+        {{> modals }}
+        <script type="module" src="/src/js/main.ts"></script>
+    </body>
+
+</html>
