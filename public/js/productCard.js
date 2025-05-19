@@ -60,7 +60,7 @@ document.addEventListener("DOMContentLoaded", () => {
             method: "POST",
           });
           if (!response.ok) {
-            throw new Error("Something went wrong");
+            throw new Error("Не удалось добавить товар в избранное");
           }
           const data = await response.text();
           console.log("Data", data);
@@ -74,9 +74,29 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const addToCartForm = card.querySelector("form");
     if (addToCartForm) {
-      addToCartForm.addEventListener("submit", (e) => {
+      const submitBtn = addToCartForm.querySelector("button[type='submit']");
+      addToCartForm.addEventListener("submit", async (e) => {
         e.preventDefault();
-        // Скрипт для добавления в корзину
+        const formData = new FormData(addToCartForm);
+        const url = addToCartForm.action;
+        submitBtn.disabled = true;
+        try {
+          const response = await fetch(url, {
+            method: "POST",
+            body: formData,
+          });
+          if (!response.ok) {
+            throw new Error("Не удалось добавить товар в корзину");
+          }
+          const data = await response.text();
+          console.log("Товар успешно добавлен в корзину", data);
+        } catch (error) {
+          console.log("Ошибка при добавлении в корзину", error);
+        } finally {
+          // Перенести потом добавление active внутрь блока try
+          submitBtn.classList.add("active");
+          submitBtn.disabled = false;
+        }
       });
     }
   };

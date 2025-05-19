@@ -35,6 +35,7 @@ const pagesConfig = {
   ...cart,
   ...homeUnauthorized,
   ...fav,
+  ...uiKit,
 };
 
 export default pagesConfig;

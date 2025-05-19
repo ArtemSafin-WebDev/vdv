@@ -410,6 +410,7 @@
   background: white;
   gap: 2rem;
   transition: color 0.2s;
+  position: relative;
   &:has(input.parsley-error) {
     border-color: var(--primary-color);
   }
@@ -417,6 +418,45 @@
   @include media.breakpoint(mobile) {
     padding: 1.5rem 2rem;
     padding-right: 1.7rem;
+  }
+}
+
+.checkout__region-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  z-index: 20;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s, visibility 0.2s ease 0.2s;
+  padding-top: 0.5rem;
+  .checkout__region-input:not(:placeholder-shown) ~ & {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.2s, visibility 0.2s;
+  }
+}
+
+.checkout__region-dropdown-inner {
+  background-color: #fff;
+  padding: 2rem;
+  border: 1px solid #f2f4f6;
+  border-radius: 1.2rem;
+  display: flex;
+  flex-direction: column;
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    li {
+      a {
+        &:hover {
+          color: var(--primary-color);
+        }
+      }
+    }
   }
 }
 
