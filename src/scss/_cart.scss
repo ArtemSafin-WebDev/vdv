@@ -73,6 +73,9 @@
     grid-row-gap: 1rem;
     display: grid;
     margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 }
 
@@ -93,7 +96,10 @@
   }
 
   @include media.breakpoint(mobile) {
-    display: contents;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
   }
 }
 
@@ -176,7 +182,7 @@
 
   @include media.breakpoint(mobile) {
     margin: 0;
-    grid-column: 2 / 3;
+    grid-column: 1 / 2;
   }
 }
 

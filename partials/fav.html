@@ -17,7 +17,12 @@
         <h1 class="search__heading">
             Избранное
         </h1>
+        <form action="/" class="search__form" method="GET">
 
+            <div class="search__filters">
+                {{> search-filters }}
+            </div>
+        </form>
         <ul class="search__list">
             <li class="search__list-item">
                 <div class="product-card">

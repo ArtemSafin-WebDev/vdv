@@ -536,6 +536,9 @@
   border-radius: 50%;
   position: relative;
   display: block;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   &::after {
     content: "";
     position: absolute;
