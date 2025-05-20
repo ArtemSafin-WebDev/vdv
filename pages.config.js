@@ -16,6 +16,7 @@ import search from "./pages-data/search";
 import cart from "./pages-data/cart";
 import homeUnauthorized from "./pages-data/homeUnauthorized";
 import fav from "./pages-data/fav";
+import uiKit from "./pages-data/ui-kit";
 const pagesConfig = {
   ...home,
   ...news,
