@@ -291,6 +291,41 @@
   aspect-ratio: 553 / 827;
   position: relative;
   width: 100%;
+  display: block;
+  &::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 4rem;
+    height: 4rem;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url("../images/zoom-in.svg");
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s;
+    @include media.breakpoint(mobile) {
+      width: 2.4rem;
+      height: 2.4rem;
+    }
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      &::after {
+        opacity: 0.7;
+      }
+    }
+  }
+
+  &:active {
+    &::after {
+      opacity: 1;
+    }
+  }
 }
 
 .product__gallery-main-card-image {
